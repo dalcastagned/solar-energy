@@ -61,6 +61,7 @@ const HomePage = () => {
                             setPasswordError(false)
                         }}
                         value={email}
+                        type='text'
                         placeholder='E-mail'
                     />
                     <InputLogin
@@ -73,6 +74,7 @@ const HomePage = () => {
                             setEmailError(false)
                         }}
                         value={password}
+                        type='password'
                         placeholder='Senha'
                     />
                     <ButtonLogin />
