@@ -27,11 +27,11 @@ const HomePage = () => {
 
         if ((user.length >= 1) &&
             (domain.length >= 3) &&
-            (user.search("@") == -1) &&
-            (domain.search("@") == -1) &&
-            (user.search(" ") == -1) &&
-            (domain.search(" ") == -1) &&
-            (domain.search(".") != -1) &&
+            (user.search("@") === -1) &&
+            (domain.search("@") === -1) &&
+            (user.search(" ") === -1) &&
+            (domain.search(" ") === -1) &&
+            (domain.search(".") !== -1) &&
             (domain.indexOf(".") >= 1) &&
             (domain.lastIndexOf(".") < domain.length - 1)) {
         } else {
@@ -47,7 +47,7 @@ const HomePage = () => {
             <ContainerImage />
             <ContainerLogin>
                 <ContainerInfo>
-                    <img src={logo} />
+                    <img src={logo} alt='Logo'/>
                     <h1>Seja bem vindo</h1>
                 </ContainerInfo>
                 <Form onSubmit={handleSubmit}>
