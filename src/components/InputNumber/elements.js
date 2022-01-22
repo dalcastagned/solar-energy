@@ -4,7 +4,7 @@ export const Container = styled.div`
     margin-top: 12px;
     display: flex;
     align-items: center;
-    border: ${({errorMessage}) => errorMessage ? '1px solid #f00' : '1px solid #000'};
+    border: ${({ errorMessage }) => errorMessage ? '1px solid #f00' : '1px solid #000'};
     max-width: 282px;
     padding: 10px;
     border-radius: 5px;
@@ -25,10 +25,18 @@ export const InputItem = styled.input`
     width: 100%;
     background: transparent;
     padding-left: 10px;
+    -moz-appearance: textfield;
+
+    ::-webkit-outer-spin-button,
+    ::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
 `
 
 export const ErrorText = styled.p`
-    display: ${({errorMessage}) => errorMessage ? 'block' : 'none'};
+    display: ${({ errorMessage }) => errorMessage ? 'block' : 'none'};
     position: absolute;
     top: 0;
     left: 15px;
