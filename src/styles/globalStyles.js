@@ -10,8 +10,6 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-    margin-top: 50px;
-    margin-left: 50px;
     background: #FAFAFA;
 }
 

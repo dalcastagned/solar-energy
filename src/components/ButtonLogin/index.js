@@ -4,7 +4,7 @@ import { Container, Button } from './elements';
 const ButtonLogin = () => {
     return (
         <Container>
-            <Button>Entrar</Button>
+            <Button type='submit'>Entrar</Button>
         </Container>
     )
 };

@@ -4,11 +4,12 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     max-width: 518px;
+    width: 100%;
 `
 
 export const Button = styled.button`
     width: 100%;
-    height: 85px;
+    height: 65px;
     font-size: 24px;
     color: #fff;
     background: #4CBC9A;

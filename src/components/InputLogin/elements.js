@@ -8,7 +8,8 @@ export const Container = styled.div`
     padding: 20px;
     border-radius: 10px;
     position: relative;
-    height: 85px;
+    height: 65px;
+    width: 100%;
 `
 
 export const Icon = styled.i`

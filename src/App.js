@@ -1,11 +1,11 @@
-import InputCheckbox from "./components/InputCheckbox";
+import HomePage from "./pages/HomePage";
 import GlobalStyle, { Container } from "./styles/globalStyles";
 
 function App() {
   return (
     <Container>
       <GlobalStyle />
-      <InputCheckbox label='Ativo' />
+      <HomePage/>
     </Container>
   );
 }
