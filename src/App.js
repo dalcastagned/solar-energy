@@ -1,11 +1,11 @@
-import ButtonRemove from "./components/ButtonRemove";
+import ButtonAction from "./components/ButtonAction";
 import GlobalStyle, { Container } from "./styles/globalStyles";
 
 function App() {
   return (
     <Container>
       <GlobalStyle />
-      <ButtonRemove />
+      <ButtonAction text='Nova Unidade' />
     </Container>
   );
 }
