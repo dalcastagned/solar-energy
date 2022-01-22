@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     border: ${({errorMessage}) => errorMessage ? '1px solid #f00' : '1px solid #000'};
-    max-width: ${({smallInput}) => smallInput ? '282px' : '564px'};
+    max-width: 282px;
     padding: 10px;
     border-radius: 5px;
     position: relative;
