@@ -68,7 +68,7 @@ export const ContainerLogin = styled.div`
 
 export const Form = styled.form`
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
