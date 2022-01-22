@@ -1,30 +1,30 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    margin-top: 12px;
     display: flex;
     align-items: center;
     border: ${({errorMessage}) => errorMessage ? '1px solid #f00' : '1px solid #000'};
-    max-width: 518px;
-    padding: 20px;
-    border-radius: 10px;
+    max-width: ${({smallInput}) => smallInput ? '282px' : '564px'};;
+    padding: 10px;
+    border-radius: 5px;
     position: relative;
 `
 
-export const Icon = styled.i`
-    display: flex;
-    font-size: 28px;
-    color: #A098AE;
+export const Label = styled.label`
+    font-size: 24px;
+    color: #53575D;
 `
 
 export const InputItem = styled.input`
     border: none;
     outline: none;
     color: #A098AE;
-    margin-left: 15px;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 21px;
     width: 100%;
     background: transparent;
+    padding-left: 10px;
 `
 
 export const ErrorText = styled.p`
