@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const NavMobile = styled.nav`
     background: #fff;
     height: 80px;
-    display: flex;
+    display: ${({visible}) => (visible ? `flex` : 'none')};
     justify-content: center;
     align-items: center;
     font-size: 20px;

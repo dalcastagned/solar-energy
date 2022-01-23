@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     width: calc(100vw - 345px);
     height: 120px;
-    display: flex;
+    display: ${({visible}) => (visible ? `flex` : 'none')};
     align-items: center;
     position: fixed;
     top: 0;

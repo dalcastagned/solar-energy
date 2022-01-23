@@ -5,12 +5,18 @@ import Unidades from "./pages/Unidades";
 import Dashboard from "./pages/Dashboard";
 import UnidadesCadastro from "./pages/UnidadesCadastro";
 import Geracao from "./pages/Geracao";
+import BottomBar from './components/BottomBar';
+import SideMenu from './components/SideMenu';
+import TopBar from './components/TopBar';
 
 function App() {
   return (
     <Container>
       <Router>
         <GlobalStyle />
+        <TopBar/>
+        <SideMenu />
+        <BottomBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
