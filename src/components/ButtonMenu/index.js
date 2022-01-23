@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container } from './elements';
+import { Container, Button } from './elements';
 
-const ButtonMenu = ({icon, text, active}) => {
+const ButtonMenu = ({icon, text, active, route}) => {
     return (
         <Container active={active}>
             <i>{icon}</i>
-            <button active={active}>{text}</button>
+            <Button to={route} active={active}>{text}</Button>
         </Container>
     )
 };
