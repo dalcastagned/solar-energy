@@ -3,11 +3,13 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     align-items: center;
-    max-width: 78px;
+    width: 100%;
+    justify-content: center;
 `
 
 export const Button = styled.button`
     width: 100%;
+    max-width: 78px;
     height: 40px;
     font-size: 16px;
     color: #fff;

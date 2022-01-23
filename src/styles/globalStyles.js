@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: Poppins, sans-serif;
     -webkit-tap-highlight-color: transparent;
+    table { border-collapse: collapse; border-spacing: 0; }
 }
 
 body {
