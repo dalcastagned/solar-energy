@@ -6,10 +6,14 @@ export const Container = styled.div`
     height: calc(100vh - 120px);
     margin: 120px 0 0 345px;
     background: #FAFAFA;
+    
+    @media screen and (max-width: 980px){
+        padding: 0;
+    }
 `
 
 export const ContainerPage = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background: #FFF;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #FAFAFA;
 `

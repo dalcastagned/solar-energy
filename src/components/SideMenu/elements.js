@@ -7,7 +7,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: #fff;
@@ -15,5 +15,9 @@ export const Container = styled.div`
     img {
         width: 159px;
         padding: 30px 0 20px 0;
+    }
+
+    @media screen and (max-width: 980px){
+        display: none;
     }
 `

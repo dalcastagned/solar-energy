@@ -5,7 +5,7 @@ export const Container = styled.div`
     height: 120px;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 345px;
     background: #fff;
@@ -14,6 +14,19 @@ export const Container = styled.div`
     h1 {
         font-size: 36px;
         line-height: 54px;
-        color: #374557;
+        color: #374557;    
+        text-align: center;
+
+    @media screen and (max-width: 980px){
+        font-size: 26px;
+        line-height: 28px;
+    }
+    }
+    
+    @media screen and (max-width: 980px){
+        width: 100vw;
+        left: 0;
+        justify-content: center;
+        height: 80px;
     }
 `
