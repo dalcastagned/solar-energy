@@ -9,11 +9,14 @@ export const Container = styled.div`
     padding: 10px;
     border-radius: 5px;
     position: relative;
+    margin-bottom: 25px;
+    width: 100%;
 `
 
 export const Label = styled.label`
     font-size: 24px;
     color: #53575D;
+    font-weight: 700;
 `
 
 export const InputItem = styled.input`

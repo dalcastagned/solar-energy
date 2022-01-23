@@ -8,13 +8,13 @@ import {
 
 const InputText = ({ label, errorMessage, errorText, smallInput, ...otherProps }) => {
     return (
-        <>
+        <div>
             <Label>{label}</Label>
             <Container smallInput={smallInput} errorMessage={errorMessage}>
                 <ErrorText errorMessage={errorMessage}>{errorText}</ErrorText>
                 <InputItem type="text" {...otherProps} />
             </Container>
-        </>
+        </div>
     )
 };
 

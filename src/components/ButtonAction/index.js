@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Button } from './elements';
 
-const ButtonAction = ({text}) => {
+const ButtonAction = ({text, ...otherProps}) => {
     return (
         <Container>
-            <Button>{text}</Button>
+            <Button {...otherProps} >{text}</Button>
         </Container>
     )
 };

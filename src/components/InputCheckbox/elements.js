@@ -3,6 +3,7 @@ import check from '../../images/check.png'
 
 export const Container = styled.div`
     max-width: 564px;
+    margin-bottom: 25px;
 `
 
 export const Label = styled.label`
