@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router";
 import logo from '../../images/logo.png'
 import InputLogin from '../../components/InputLogin'
 import ButtonLogin from '../../components/ButtonLogin'
@@ -18,10 +19,12 @@ const HomePage = () => {
     const [emailError, setEmailError] = useState(false)
     const [password, setPassword] = useState('')
     const [passwordError, setPasswordError] = useState(false)
+    const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
 
+        let LoginOK = false
         let user = email.substring(0, email.indexOf("@"));
         let domain = email.substring(email.indexOf("@") + 1, email.length);
 
@@ -36,18 +39,29 @@ const HomePage = () => {
             (domain.lastIndexOf(".") < domain.length - 1)) {
         } else {
             setEmailError(true)
+            LoginOK = true
         }
 
         if (password.length < 6) {
             setPasswordError(true)
+            LoginOK = true
         }
+
+        const navigation = () => {
+            navigate("/dashboard")
+        }
+
+        if (!LoginOK) {
+            navigation()
+        }
+
     }
     return (
         <Container>
             <ContainerImage />
             <ContainerLogin>
                 <ContainerInfo>
-                    <img src={logo} alt='Logo'/>
+                    <img src={logo} alt='Logo' />
                     <h1>Seja bem vindo</h1>
                 </ContainerInfo>
                 <Form onSubmit={handleSubmit}>
