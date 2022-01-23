@@ -28,5 +28,6 @@ export const Container = styled.div`
         left: 0;
         justify-content: center;
         height: 80px;
+        border-bottom: 1px solid #374557;
     }
 `
