@@ -1,8 +1,29 @@
 {
-    "unidades": [
-        
-    ],
-    "geracao": [
-        
-    ]
+  "unidades": [
+    {
+      "id": "da67a627-2783-4332-bd27-24243b22c1b1",
+      "nickname": "Usina 1",
+      "place": "Bahia",
+      "brand": "Solares",
+      "model": "100kW",
+      "active": true
+    },
+    {
+      "id": "d5db8d86-7f46-427d-8582-ae4ba448baf7",
+      "nickname": "Usina 2",
+      "place": "Pernambuco",
+      "brand": "Resun",
+      "model": "500kW",
+      "active": true
+    },
+    {
+      "id": "e3ace8a0-f782-49a9-8fb0-04709816779b",
+      "nickname": "Usina 3",
+      "place": "Santa Catarina",
+      "brand": "Resun",
+      "model": "200kW",
+      "active": false
+    }
+  ],
+  "geracao": []
 }
