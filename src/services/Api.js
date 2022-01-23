@@ -21,7 +21,6 @@ export const setInfo = (url, data) => {
   })
 }
 
-
 export const updateInfo = (url, data) => {
   return instance.put(url, data)
   .then(() => {
@@ -29,5 +28,15 @@ export const updateInfo = (url, data) => {
   })
   .catch(() => {
     toast.error('Erro ao atualizar')
+  })
+}
+
+export const deleteInfo = (url) => {
+  return instance.delete(url)
+  .then(() => {
+    toast.success('Deletado com sucesso')
+  })
+  .catch(() => {
+    toast.error('Erro ao deletar')
   })
 }
