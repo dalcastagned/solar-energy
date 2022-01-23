@@ -5,9 +5,9 @@ export const Container = styled.fieldset`
     align-items: center;
     border: ${({errorMessage}) => errorMessage ? '1px solid #f00' : '1px solid #000'};
     max-width: 518px;
-    padding: 20px;
+    padding: 10px 20px 30px 20px;
     border-radius: 10px;
-    height: 85px;
+    height: 70px;
     width: 100%;
 
     i {
