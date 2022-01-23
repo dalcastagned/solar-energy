@@ -20,3 +20,14 @@ export const setInfo = (url, data) => {
     toast.error('Erro ao cadastrar')
   })
 }
+
+
+export const updateInfo = (url, data) => {
+  return instance.put(url, data)
+  .then(() => {
+    toast.success('Atualizado com sucesso')
+  })
+  .catch(() => {
+    toast.error('Erro ao atualizar')
+  })
+}

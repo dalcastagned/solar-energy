@@ -6,7 +6,7 @@
       "place": "Bahia",
       "brand": "Solares",
       "model": "100kW",
-      "active": true
+      "active": false
     },
     {
       "id": "d5db8d86-7f46-427d-8582-ae4ba448baf7",
@@ -22,6 +22,38 @@
       "place": "Santa Catarina",
       "brand": "Resun",
       "model": "200kW",
+      "active": true
+    },
+    {
+      "id": "57a2f0c8-8495-46c7-84f5-c11ab3a3083d",
+      "nickname": "Usina 4",
+      "place": "São Paulo",
+      "brand": "Resun",
+      "model": "250kW",
+      "active": true
+    },
+    {
+      "id": "6e145143-401b-422e-9fbe-e3f72434b36d",
+      "nickname": "Usina 5",
+      "place": "Amapá",
+      "brand": "WEG",
+      "model": "120kW",
+      "active": true
+    },
+    {
+      "id": "88c8fb5d-e3ea-4742-9779-14dd0c697ac3",
+      "nickname": "Usina 6",
+      "place": "Rio Grande do Sul",
+      "brand": "Resun",
+      "model": "40kW",
+      "active": true
+    },
+    {
+      "id": "ef0b3f3f-e72d-4e33-8b69-ec95e90b36c8",
+      "nickname": "Usina 7",
+      "place": "Manaus",
+      "brand": "Solares",
+      "model": "150kW",
       "active": true
     }
   ],
@@ -43,6 +75,12 @@
       "unity": "Usina 3",
       "date": "2022-01-11",
       "kw": "80"
+    },
+    {
+      "id": "6e145143-401b-422e-9fbe-e3f72434b36d",
+      "unity": "Usina 5",
+      "date": "2022-01-11",
+      "kw": "150"
     }
   ]
 }

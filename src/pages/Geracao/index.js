@@ -58,6 +58,9 @@ const UnidadesCadastro = () => {
                     kw: kw,
                 }
             )
+            setUnity('')
+            setDate('')
+            setKw('')
         }
     }
 
@@ -70,6 +73,7 @@ const UnidadesCadastro = () => {
                     errorText="Campo Obrigatório"
                     options={options}
                     placeholder='Painel 1'
+                    value={unity}
                     onChange={(e) => {
                         setUnity(e.target.value)
                         setError({})
@@ -79,6 +83,7 @@ const UnidadesCadastro = () => {
                     label='Data'
                     errorMessage={error.dateError}
                     errorText="Campo Obrigatório"
+                    value={date}
                     onChange={(e) => {
                         setDate(e.target.value)
                         setError({})
@@ -89,6 +94,7 @@ const UnidadesCadastro = () => {
                     errorMessage={error.kwError}
                     errorText="Campo Obrigatório"
                     placeholder='80'
+                    value={kw}
                     onChange={(e) => {
                         setKw(e.target.value)
                         setError({})
