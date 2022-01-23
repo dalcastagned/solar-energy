@@ -7,11 +7,11 @@ import {
     Option
 } from './elements'
 
-const InputSelect = ({ label, errorMessage, errorText, smallInput, options, ...otherProps }) => {
+const InputSelect = ({ label, errorMessage, errorText, options, ...otherProps }) => {
     return (
         <>
             <Label>{label}</Label>
-            <Container smallInput={smallInput} errorMessage={errorMessage}>
+            <Container errorMessage={errorMessage}>
                 <ErrorText errorMessage={errorMessage}>{errorText}</ErrorText>
                 <InputItem {...otherProps}>
                     <Option value=''>Selecione</Option>

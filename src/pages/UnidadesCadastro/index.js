@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import { useState } from 'react/cjs/react.development';
 import ButtonAction from '../../components/ButtonAction';
 import InputCheckbox from '../../components/InputCheckbox';
 import InputText from '../../components/InputText';
