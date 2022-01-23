@@ -7,3 +7,9 @@ export const Container = styled.div`
     margin: 120px 0 0 345px;
     background: #FAFAFA;
 `
+
+export const ContainerPage = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background: #FFF;
+`

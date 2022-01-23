@@ -1,15 +1,17 @@
 import React from 'react';
 import SideMenu from '../../components/SideMenu';
-import { Container } from './elements';
+import TopBar from '../../components/TopBar';
+import { Container, ContainerPage } from './elements';
 
 const Unidades = () => {
     return (
-        <>
-            <SideMenu activeUnidade={true}  />
+        <ContainerPage>
+            <TopBar title='Unidades' />
+            <SideMenu activeUnidade={true} />
             <Container>
 
             </Container>
-        </>
+        </ContainerPage>
     )
 };
 
