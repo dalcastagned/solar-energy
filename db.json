@@ -55,6 +55,14 @@
       "brand": "Solares",
       "model": "150kW",
       "active": true
+    },
+    {
+      "id": "05624cce-6b0a-49a1-8673-581ee214b302",
+      "nickname": "Usina 8",
+      "place": "Guaramirim",
+      "brand": "Resun",
+      "model": "120kW",
+      "active": true
     }
   ],
   "geracao": [

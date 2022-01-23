@@ -1,24 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import ButtonAction from '../../components/ButtonAction';
 import InputCheckbox from '../../components/InputCheckbox';
 import InputText from '../../components/InputText';
+import { UnityContext } from '../../context/Unity';
 import { getInfo, setInfo, updateInfo } from '../../services/Api';
 import { Container, Form } from './elements';
 
 const UnidadesCadastro = () => {
 
     const { pathname } = useLocation()
-    const [nickname, setNickname] = useState('')
-    const [place, setPlace] = useState('')
-    const [brand, setBrand] = useState('')
-    const [model, setModel] = useState('')
-    const [active, setActive] = useState(false)
-    const [error, setError] = useState({})
     const params = useParams();
     const navigate = useNavigate();
+    const { nickname,
+        setNickname,
+        brand,
+        setBrand,
+        place,
+        setPlace,
+        model,
+        setModel,
+        active,
+        setActive,
+        error,
+        setError,
+        handleSubmit
+    } = useContext(UnityContext)
     const title = (pathname === '/unidades/cadastro' ? "Cadastro de Unidade Geradora" : "Atualização de Unidade Geradora")
     const titleButton = (pathname === '/unidades/cadastro' ? "Salvar" : "Atualizar")
 
@@ -40,64 +49,31 @@ const UnidadesCadastro = () => {
 
     function handleUpdate(event) {
         event.preventDefault();
-
-        setError({
-            nicknameError: (nickname.length < 1 ? true : false),
-            placeError: (place.length < 1 ? true : false),
-            brandError: (brand.length < 1 ? true : false),
-            modelError: (model.length < 1 ? true : false)
-        })
-
-        if (nickname.length > 0 &&
-            place.length > 0 &&
-            brand.length > 0 &&
-            model.length > 0) {
-            updateInfo(
-                `/unidades/${params.id}`,
-                {
-                    id: params.id,
-                    nickname: nickname,
-                    place: place,
-                    brand: brand,
-                    model: model,
-                    active: active
-                }
-            )
-            navigate('/unidades')
-        }
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-
-        setError({
-            nicknameError: (nickname.length < 1 ? true : false),
-            placeError: (place.length < 1 ? true : false),
-            brandError: (brand.length < 1 ? true : false),
-            modelError: (model.length < 1 ? true : false)
-        })
-
-        if (nickname.length > 0 &&
-            place.length > 0 &&
-            brand.length > 0 &&
-            model.length > 0) {
-            setInfo(
-                '/unidades',
-                {
-                    id: uuidv4(),
-                    nickname: nickname,
-                    place: place,
-                    brand: brand,
-                    model: model,
-                    active: active
-                }
-            )
-            setNickname('')
-            setPlace('')
-            setBrand('')
-            setModel('')
-            setActive(false)
-        }
+ 
+         setError({
+             nicknameError: (nickname.length < 1 ? true : false),
+             placeError: (place.length < 1 ? true : false),
+             brandError: (brand.length < 1 ? true : false),
+             modelError: (model.length < 1 ? true : false)
+         })
+ 
+         if (nickname.length > 0 &&
+             place.length > 0 &&
+             brand.length > 0 &&
+             model.length > 0) {
+             updateInfo(
+                 `/unidades/${params.id}`,
+                 {
+                     id: params.id,
+                     nickname: nickname,
+                     place: place,
+                     brand: brand,
+                     model: model,
+                     active: active
+                 }
+             )
+             navigate('/unidades')
+         }
     }
 
     return (

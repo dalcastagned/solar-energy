@@ -10,24 +10,27 @@ import Geracao from "./pages/Geracao";
 import BottomBar from './components/BottomBar';
 import SideMenu from './components/SideMenu';
 import TopBar from './components/TopBar';
+import { UnityProvider } from "./context/Unity";
 
 function App() {
   return (
     <Container>
-      <Router>
-        <GlobalStyle />
-        <TopBar />
-        <SideMenu />
-        <BottomBar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/unidades" element={<Unidades />} />
-          <Route path="/unidades/cadastro" element={<UnidadesCadastro />} />
-          <Route path="/unidades/edicao/:id" element={<UnidadesCadastro />} />
-          <Route path="/geracao/cadastro" element={<Geracao />} />
-        </Routes>
-      </Router>
+      <UnityProvider>
+        <Router>
+          <GlobalStyle />
+          <TopBar />
+          <SideMenu />
+          <BottomBar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/unidades" element={<Unidades />} />
+            <Route path="/unidades/cadastro" element={<UnidadesCadastro />} />
+            <Route path="/unidades/edicao/:id" element={<UnidadesCadastro />} />
+            <Route path="/geracao/cadastro" element={<Geracao />} />
+          </Routes>
+        </Router>
+      </UnityProvider>
       <ToastContainer />
     </Container>
   );
