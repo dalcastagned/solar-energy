@@ -16,8 +16,6 @@ const UnidadesCadastro = () => {
     const [date, setDate] = useState(new Date())
     const [kw, setKw] = useState('')
     const [error, setError] = useState({})
-
-    console.log(date)
     
     const getActiveUnits = (data) => {
         const activeUnits = data.filter(item => item.active === true)
