@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import {
     Container,
     Label,
@@ -6,13 +8,19 @@ import {
     ErrorText,
 } from './elements'
 
-const InputDate = ({ label, errorMessage, errorText, ...otherProps }) => {
+const InputDate = ({ label, errorMessage, errorText, date, setDate, setError }) => {
+
     return (
         <>
             <Label>{label}</Label>
-            <Container errorMessage={errorMessage}>
-                <ErrorText errorMessage={errorMessage}>{errorText}</ErrorText>
-                <InputItem type="date" {...otherProps} />
+            <Container>
+                <DatePicker className='datepicker'
+                    selected={date}
+                    onChange={(date) => {setDate(date)}}
+                    dateFormat="MM/yyyy"
+                    showMonthYearPicker
+                    showFullMonthYearPicker
+                />
             </Container>
         </>
     )

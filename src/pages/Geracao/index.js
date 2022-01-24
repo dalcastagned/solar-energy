@@ -12,9 +12,11 @@ const UnidadesCadastro = () => {
     const [options, setOptions] = useState([])
     const [units, setUnits] = useState([])
     const [unity, setUnity] = useState('')
-    const [date, setDate] = useState('')
+    const [date, setDate] = useState(new Date())
     const [kw, setKw] = useState('')
     const [error, setError] = useState({})
+
+    console.log(date)
     
     const getActiveUnits = (data) => {
         const activeUnits = data.filter(item => item.active === true)
@@ -42,7 +44,6 @@ const UnidadesCadastro = () => {
 
         setError({
             unityError: (unity.length < 1 ? true : false),
-            dateError: (date.length < 1 ? true : false),
             kwError: (kw.length < 1 ? true : false)
         })
 
@@ -81,13 +82,8 @@ const UnidadesCadastro = () => {
                 />
                 <InputDate
                     label='Data'
-                    errorMessage={error.dateError}
-                    errorText="Campo Obrigatório"
-                    value={date}
-                    onChange={(e) => {
-                        setDate(e.target.value)
-                        setError({})
-                    }}
+                    date={date}
+                    setDate={setDate}
                 />
                 <InputNumber
                     label='Total kW gerado'

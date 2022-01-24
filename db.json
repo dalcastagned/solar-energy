@@ -6,7 +6,7 @@
       "place": "Bahia 2",
       "brand": "Solares",
       "model": "100kW",
-      "active": false
+      "active": true
     },
     {
       "id": "d5db8d86-7f46-427d-8582-ae4ba448baf7",
