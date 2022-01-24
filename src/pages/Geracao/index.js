@@ -6,6 +6,7 @@ import InputSelect from '../../components/InputSelect';
 import InputNumber from '../../components/InputNumber';
 import InputDate from '../../components/InputDate';
 import { toast } from 'react-toastify';
+import { v4 as uuidv4 } from 'uuid';
 
 const UnidadesCadastro = () => {
 
@@ -48,19 +49,18 @@ const UnidadesCadastro = () => {
         })
 
         if (unity.length > 0 &&
-            date.length > 0 &&
             kw.length > 0) {
             setInfo(
                 '/geracao',
                 {
-                    id: id[0].id,
+                    id: uuidv4(),
+                    idUnity: id[0].id,
                     unity: unity,
                     date: date,
                     kw: kw,
                 }
             )
             setUnity('')
-            setDate('')
             setKw('')
         }
     }
