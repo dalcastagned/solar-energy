@@ -27,7 +27,7 @@ export const ContainerChart = styled.div`
     border: 1px solid #E5E5E5;
     border-radius: 4px;
     padding: 30px;
-    margin-top: 40px;
+    margin: 40px auto 0px auto;
 
     h1 {
         padding-bottom: 30px;

@@ -9,23 +9,51 @@ const Dashboard = () => {
 
     const [activeUnits, setActiveUnits] = useState([])
     const [units, setUnits] = useState([])
-    const [generation, setGeneration] = useState([])
-    const [monthlyGeneration, setMonthlyGeneration] = useState([])
     const [averageGeneration, setAverageGeneration] = useState(0)
-    const [last12Month, setLast12Month] = useState([])
     const [last12MonthText, setLast12MonthText] = useState([])
-
-    console.log(monthlyGeneration)
+    const [monthlyGeneration, setMonthlyGeneration] = useState([])
 
     const getActiveUnits = (data) => {
         setActiveUnits(data.filter(item => item.active === true))
     }
 
-    const getGeneration = (data) => {
-        let totalGeneration = 0
-        data.map(data => {
-            totalGeneration += parseFloat(data.kw)
+    const getMonthlyGeneration = (data) => {
+
+        let initialDate = new Date(new Date().setMonth(new Date().getMonth() - 12))
+
+        const last12Month = getLast12Month(new Date(`${new Date().getFullYear()}-${new Date().getMonth() + 1}-01`))
+
+        let getGeneration = []
+        
+        last12Month.map(month => {
+            getGeneration.unshift(data.filter(item => {
+                if ((new Date(item.date) >= initialDate) && (new Date(item.date) <= new Date()) && new Date(item.date).getMonth() === month.getMonth()) {
+                    return true
+                } else {
+                    return false
+                }
+            }))
+            return null
         })
+
+        let getTotalMontlyGeneration = []
+
+        getGeneration.map(item => {
+            let total = 0
+            item.map(newItem => (
+                total += parseFloat(newItem.kw)
+            ))
+            getTotalMontlyGeneration.push(total)
+            return null
+        })
+
+        setMonthlyGeneration(getTotalMontlyGeneration)
+
+
+        let totalGeneration = 0
+        getTotalMontlyGeneration.map(data => (
+            totalGeneration += parseFloat(data)
+        ))
         setAverageGeneration(totalGeneration / 12)
     }
 
@@ -55,11 +83,11 @@ const Dashboard = () => {
         for (let i = 1; i < 12; i++) {
             dates.push(getLastMonth(date, i * -1));
         }
-        setLast12Month(dates)
-        dates.map((value) => {
+        dates.map((value) => (
             months.unshift(monthNumberToLabelMap[value.getMonth()])
-        })
-        return months;
+        ))
+        setLast12MonthText(months);
+        return dates
     }
 
     useEffect(() => {
@@ -74,14 +102,12 @@ const Dashboard = () => {
 
         getInfo("/geracao")
             .then((data) => {
-                setGeneration(data)
-                getGeneration(data)
+                getMonthlyGeneration(data)
             })
             .catch(() => {
                 toast.error('Erro ao buscar dados')
             });
-
-        setLast12MonthText(getLast12Month(new Date()))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -94,7 +120,7 @@ const Dashboard = () => {
             </Cards>
             <ContainerChart>
                 <h1>Total de energia gerada por mês</h1>
-                <Chart labels={last12MonthText} />
+                <Chart labels={last12MonthText} dataPlot={monthlyGeneration} />
             </ContainerChart>
         </Container>
     )

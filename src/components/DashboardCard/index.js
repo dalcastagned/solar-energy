@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ContainerInfo } from "./elements";
+import { Container } from "./elements";
 
 const DashboardCards = ({text, value, measure}) => {
 

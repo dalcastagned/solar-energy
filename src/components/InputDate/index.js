@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {
     Container,
-    Label,
-    InputItem,
-    ErrorText,
+    Label
 } from './elements'
 
-const InputDate = ({ label, errorMessage, errorText, date, setDate, setError }) => {
+const InputDate = ({ label, date, setDate, setError }) => {
 
     return (
         <>

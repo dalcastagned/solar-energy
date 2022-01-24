@@ -11,7 +11,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
-export default function Chart({labels}) {
+export default function Chart({labels, dataPlot}) {
 
     ChartJS.register(
         CategoryScale,
@@ -40,7 +40,7 @@ export default function Chart({labels}) {
         datasets: [
             {
                 label: 'Geração',
-                data: [5, 6, 7],
+                data: dataPlot,
                 borderColor: '#2196F3',
                 backgroundColor: '#2196F3',
             },

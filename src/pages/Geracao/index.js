@@ -38,8 +38,6 @@ const UnidadesCadastro = () => {
         event.preventDefault();
 
         const id = units.filter(item => item.nickname === unity)
-        
-        console.log(id)
 
         setError({
             unityError: (unity.length < 1 ? true : false),
