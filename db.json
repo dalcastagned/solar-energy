@@ -22,6 +22,14 @@
       "place": "Santa Catarina",
       "brand": "Resun",
       "model": "120kW",
+      "active": true
+    },
+    {
+      "id": "d56279d1-ef5a-49b6-88d3-79a594b02ea3",
+      "nickname": "Usina 4",
+      "place": "Jaraguá",
+      "brand": "Resun",
+      "model": "230kw",
       "active": false
     }
   ],
@@ -81,6 +89,13 @@
       "unity": "Usina 1",
       "date": "2022-01-24T22:08:39.372Z",
       "kw": "26"
+    },
+    {
+      "id": "013e043f-d33d-4f86-962b-da71385819d5",
+      "idUnity": "78ea99ca-ae6e-4f10-8268-8e983e6e2473",
+      "unity": "Usina 3",
+      "date": "2021-08-01T22:22:14.000Z",
+      "kw": "25"
     }
   ]
 }
