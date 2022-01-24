@@ -63,6 +63,14 @@
       "brand": "Resun",
       "model": "120kW",
       "active": true
+    },
+    {
+      "id": "16d3e9c2-c912-4f4b-84c6-0db89afd29d3",
+      "nickname": "Usina 9",
+      "place": "Jaraguá",
+      "brand": "Resun",
+      "model": "155kW",
+      "active": false
     }
   ],
   "geracao": [
