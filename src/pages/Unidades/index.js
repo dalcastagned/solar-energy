@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import ButtonAction from '../../components/ButtonAction';
+import CardUnity from '../../components/CardUnity';
 import Table from '../../components/Table';
 import { deleteInfo, getInfo } from '../../services/Api';
-import { Container, ContainerButton } from './elements';
+import {
+    Container,
+    ContainerButton,
+    ContainerCard
+} from './elements';
 
 
 const Unidades = () => {
 
-    const [updateTable, setUpdateTable] = useState(false)
+    const [updateUnits, setUpdateUnits] = useState(false)
     const [units, setUnits] = useState([])
     const navigate = useNavigate();
 
@@ -21,21 +26,26 @@ const Unidades = () => {
             .catch(() => {
                 toast.error('Erro ao buscar dados')
             });
-    }, [updateTable]);
+    }, [updateUnits]);
 
     function handleRemove(id) {
         deleteInfo(
             `/unidades/${id}`,
         )
-        setUpdateTable(!updateTable)
+        setUpdateUnits(!updateUnits)
     }
 
     return (
         <Container>
             <h1>Lista de unidades</h1>
-            <Table data={units} handleRemove={handleRemove}/>
+            <Table data={units} handleRemove={handleRemove} />
+            <ContainerCard>
+                {React.Children.toArray(units.map(unity =>(
+                    <CardUnity unity={unity} handleRemove={handleRemove}/>
+                )))}   
+            </ContainerCard>
             <ContainerButton>
-                <ButtonAction text="Nova Unidade" onClick={() => navigate('/unidades/cadastro')}/>
+                <ButtonAction text="Nova Unidade" onClick={() => navigate('/unidades/cadastro')} />
             </ContainerButton>
         </Container>
     )

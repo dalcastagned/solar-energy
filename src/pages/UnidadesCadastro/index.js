@@ -92,11 +92,11 @@ const UnidadesCadastro = () => {
                     active: active
                 }
             )
-            setNickname('')
-            setPlace('')
-            setBrand('')
-            setModel('')
-            setActive(false)
+                setNickname('')
+                setPlace('')
+                setBrand('')
+                setModel('')
+                setActive(false)
         }
     }
 

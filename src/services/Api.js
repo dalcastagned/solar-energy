@@ -34,9 +34,9 @@ export const updateInfo = (url, data) => {
 export const deleteInfo = (url) => {
   return instance.delete(url)
   .then(() => {
-    toast.success('Deletado com sucesso')
+    toast.success('Removido com sucesso')
   })
   .catch(() => {
-    toast.error('Erro ao deletar')
+    toast.error('Erro ao remover')
   })
 }

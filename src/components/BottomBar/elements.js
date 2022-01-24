@@ -14,7 +14,7 @@ export const NavMobile = styled.nav`
     z-index: 999;
     width: 100%;
  
-    @media screen and (min-width: 980px){
+    @media screen and (min-width: 1025px){
         display: none;
     }
 `
@@ -23,7 +23,7 @@ export const NavMenuMobile = styled.ul`
     display: grid;
     list-style: none;
     text-align: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
 `
 
@@ -51,16 +51,29 @@ export const NavLinksMobile = styled(Link)`
         width: 60px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;  
+               
+        @media screen and (max-width: 580px){
+            height: 40px;
+            width: 40px;
+        }
+
+        @media screen and (max-width: 380px){
+            height: 30px;
+            width: 30px;
+        }
     }
 
     .icon{       
         color: #374557;
         font-size: 50px;
-
          
-    @media screen and (max-width: 580px){
-        font-size: 40px;
-    }
+        @media screen and (max-width: 580px){
+            font-size: 40px;
+        }
+
+        @media screen and (max-width: 380px){
+            font-size: 30px;
+        }
     }
 `

@@ -6,6 +6,11 @@ export const TableContainer = styled.table`
     box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.08);
     background: #fff;
     margin: 0 auto;
+
+    
+    @media screen and (max-width: 750px){
+            display: none;
+        }
 `
 
 export const Thead = styled.thead`
