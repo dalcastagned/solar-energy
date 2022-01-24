@@ -15,62 +15,6 @@
       "brand": "Resun",
       "model": "500kW",
       "active": true
-    },
-    {
-      "id": "e3ace8a0-f782-49a9-8fb0-04709816779b",
-      "nickname": "Usina 3",
-      "place": "Santa Catarina",
-      "brand": "Resun",
-      "model": "200kW",
-      "active": true
-    },
-    {
-      "id": "57a2f0c8-8495-46c7-84f5-c11ab3a3083d",
-      "nickname": "Usina 4",
-      "place": "São Paulo",
-      "brand": "Resun",
-      "model": "250kW",
-      "active": true
-    },
-    {
-      "id": "6e145143-401b-422e-9fbe-e3f72434b36d",
-      "nickname": "Usina 5",
-      "place": "Amapá",
-      "brand": "WEG",
-      "model": "120kW",
-      "active": true
-    },
-    {
-      "id": "88c8fb5d-e3ea-4742-9779-14dd0c697ac3",
-      "nickname": "Usina 6",
-      "place": "Rio Grande do Sul",
-      "brand": "Resun",
-      "model": "40kW",
-      "active": true
-    },
-    {
-      "id": "ef0b3f3f-e72d-4e33-8b69-ec95e90b36c8",
-      "nickname": "Usina 7",
-      "place": "Manaus",
-      "brand": "Solares",
-      "model": "150kW",
-      "active": true
-    },
-    {
-      "id": "05624cce-6b0a-49a1-8673-581ee214b302",
-      "nickname": "Usina 8",
-      "place": "Guaramirim",
-      "brand": "Resun",
-      "model": "120kW",
-      "active": true
-    },
-    {
-      "id": "16d3e9c2-c912-4f4b-84c6-0db89afd29d3",
-      "nickname": "Usina 9",
-      "place": "Jaraguá",
-      "brand": "Resun",
-      "model": "155kW",
-      "active": false
     }
   ],
   "geracao": [

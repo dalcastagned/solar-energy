@@ -15,7 +15,7 @@ const SideMenu = () => {
         <Container visible={pathname !== '/'}>
             <img src={logo} alt='Logo' />
             <ButtonMenu route='/dashboard' icon={<FaChartPie />} text='Dashboard' active={pathname === '/dashboard'} />
-            <ButtonMenu route='/unidades' icon={<MdShowChart />} text='Unidade consumidora' active={((pathname === '/dashboard') || (pathname === '/geracao/cadastro')) ? false : true} />
+            <ButtonMenu route='/unidades' icon={<MdShowChart />} text='Unidade consumidora' active={pathname.search("unidades") !== -1} />
             <ButtonMenu route='/geracao/cadastro' icon={<BsGearFill />} text='Cadastro de energia gerada' active={pathname === '/geracao/cadastro'} />
         </Container>
     )

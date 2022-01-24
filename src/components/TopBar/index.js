@@ -5,7 +5,7 @@ import { Container } from './elements';
 const TopBar = () => {
 
     const {pathname} = useLocation()
-    const title = (pathname === '/dashboard' ? 'Dasboard' : pathname === '/unidades' ? 'Unidades' : pathname === '/geracao/cadastro' ? 'Lançamento de geração mensal' : 'Unidades')
+    const title = (pathname === '/dashboard' ? 'Dasboard' : pathname.search("unidades") !== -1 ? 'Unidades' : pathname === '/geracao/cadastro' && 'Lançamento de geração mensal')
     
     return (
         <Container visible={pathname !== '/'}>

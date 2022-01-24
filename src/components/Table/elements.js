@@ -14,8 +14,8 @@ export const Thead = styled.thead`
     height: 56px;
 `
 
-export const Tbody = styled.tbody`
-    background: rgba(232, 232, 232, 0.2);
+export const Tr = styled.tr`
+    background: #fff;
     border-bottom: 1px solid #E8E8E8;
     height: 56px;
     text-align: center;

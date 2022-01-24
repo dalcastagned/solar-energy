@@ -1,13 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ButtonEdit from '../ButtonEdit';
 import ButtonRemove from '../ButtonRemove';
 import {
     TableContainer,
     Thead,
-    Tbody,
+    Tr,
 } from './elements'
 
-const Table = () => {
+const Table = ({ data, handleRemove }) => {
+
+    const navigate = useNavigate();
+
     return (
         <TableContainer>
             <Thead>
@@ -21,17 +25,24 @@ const Table = () => {
                     <th></th>
                 </tr>
             </Thead>
-            <Tbody>
-                <tr>
-                    <td>123456</td>
-                    <td>Usina 1</td>
-                    <td>Germany</td>
-                    <td>Marcaasd</td>
-                    <td>216354</td>
-                    <td><ButtonEdit /></td>
-                    <td><ButtonRemove /></td>
-                </tr>
-            </Tbody>
+            <tbody>
+                {React.Children.toArray(data.map(data => (
+                    <Tr>
+                        <td>{data.id.substring(0, 3) + "..."}</td>
+                        <td>{data.nickname}</td>
+                        <td>{data.place}</td>
+                        <td>{data.brand}</td>
+                        <td>{data.model}</td>
+                        <td>
+                            <ButtonEdit onClick={() => navigate(`/unidades/edicao/${data.id}`)} />
+                        </td>
+                        <td>
+                            <ButtonRemove onClick={() => handleRemove(data.id)} />
+                        </td>
+                    </Tr>
+                )))}
+
+            </tbody>
         </TableContainer>
     )
 };

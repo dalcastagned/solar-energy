@@ -4,6 +4,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     max-width: 252px;
+    width: 100%;
 `
 
 export const Button = styled.button`

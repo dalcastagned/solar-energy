@@ -30,6 +30,6 @@ export const Button = styled(Link)`
     font-weight: 500;
     text-align: left;
     font-size: 18px;
-    color: ${({active}) => active ? '#fff' : '#A098AE'};
+    color: ${({active}) => active==="true" ? '#fff' : '#A098AE'};
     text-decoration: none;
 `

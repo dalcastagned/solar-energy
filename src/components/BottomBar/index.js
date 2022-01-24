@@ -23,7 +23,7 @@ const BottomBar = () => {
                         </div>
                     </NavLinksMobile>
                 </NavItemMobile>
-                <NavItemMobile active={((pathname === '/dashboard') || (pathname === '/geracao/cadastro')) ? false : true} $border={true}>
+                <NavItemMobile active={pathname.search("unidades") !== -1} $border={true}>
                     <NavLinksMobile to='/unidades'>
                         <div>
                             <MdShowChart className='icon' />

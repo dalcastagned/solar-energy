@@ -5,7 +5,7 @@ const ButtonMenu = ({icon, text, active, route}) => {
     return (
         <Container active={active}>
             <i>{icon}</i>
-            <Button to={route} active={active}>{text}</Button>
+            <Button to={route} active={active.toString()}>{text}</Button>
         </Container>
     )
 };
