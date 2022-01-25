@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export const NavMobile = styled.nav`
     background: #fff;
-    height: 80px;
+    height: 45px;
     display: ${({visible}) => (visible ? `flex` : 'none')};
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ export const NavMenuMobile = styled.ul`
 `
 
 export const NavItemMobile = styled.li`
-    height: 80px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,33 +47,15 @@ export const NavLinksMobile = styled(Link)`
     width: 100%;
 
     div {
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
         display: flex;
         align-items: center;
         justify-content: center;  
-               
-        @media screen and (max-width: 580px){
-            height: 40px;
-            width: 40px;
-        }
-
-        @media screen and (max-width: 380px){
-            height: 30px;
-            width: 30px;
-        }
     }
 
     .icon{       
         color: #374557;
-        font-size: 50px;
-         
-        @media screen and (max-width: 580px){
-            font-size: 40px;
-        }
-
-        @media screen and (max-width: 380px){
-            font-size: 30px;
-        }
+        font-size: 35px;
     }
 `

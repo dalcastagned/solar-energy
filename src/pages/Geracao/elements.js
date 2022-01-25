@@ -6,7 +6,7 @@ export const Container = styled.div`
     min-height: 100vh;
     background: #FAFAFA;
 
-    @media screen and (max-width: 980px){
+    @media screen and (max-width: 1025px){
         padding: 0;
         display: flex;
         flex-direction: column;
