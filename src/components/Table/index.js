@@ -21,6 +21,7 @@ const Table = ({ data, handleRemove }) => {
                     <th>Local</th>
                     <th>Marca</th>
                     <th>Modelo</th>
+                    <th>Ativo</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -33,6 +34,7 @@ const Table = ({ data, handleRemove }) => {
                         <td>{data.place}</td>
                         <td>{data.brand}</td>
                         <td>{data.model}</td>
+                        <td>{data.active ? "Ativo" : "Inativo"}</td>
                         <td>
                             <ButtonEdit onClick={() => navigate(`/unidades/edicao/${data.id}`)} />
                         </td>

@@ -10,9 +10,6 @@ export const Container = styled.div`
 `
 
 export const ContainerTop = styled.div`
-    display: flex;
-    position: relative;
-    align-items: center;
     background-color: rgba(232, 232, 232, 0.8);
     border: none;
     border-radius: 10px 10px 0 0;
@@ -22,6 +19,7 @@ export const ContainerTop = styled.div`
         color: #000;
         font-size: 20px;
         font-weight: 700;
+        text-align: center;
     }
 `
 
@@ -30,19 +28,9 @@ export const ContainerInfo = styled.div`
     border-radius: 0 0 10px 10px;
 
     div {
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
         display: flex;
-        padding: 10px;
+        padding: 5px 10px 10px 10px;
     }
-    
-    &:hover div {
-        opacity: 1;
-        transition: max-height 0.25s ease-in;
-        max-height: 500px;
-        }
-
 
     p {
         padding: 10px;
