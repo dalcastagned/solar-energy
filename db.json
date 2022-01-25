@@ -3,15 +3,15 @@
     {
       "id": "da67a627-2783-4332-bd27-24243b22c1b1",
       "nickname": "Usina 1",
-      "place": "Bahia 2",
+      "place": "Bahia",
       "brand": "Solares",
       "model": "100kW",
-      "active": true
+      "active": false
     },
     {
       "id": "d5db8d86-7f46-427d-8582-ae4ba448baf7",
       "nickname": "Usina 2",
-      "place": "Pernambuco",
+      "place": "Pernambuco 2",
       "brand": "Resun",
       "model": "500kW",
       "active": true
@@ -30,7 +30,7 @@
       "place": "Jaraguá",
       "brand": "Resun",
       "model": "230kw",
-      "active": false
+      "active": true
     }
   ],
   "geracao": [
