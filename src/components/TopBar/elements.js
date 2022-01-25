@@ -16,7 +16,7 @@ export const Container = styled.div`
         width: 100vw;
         left: 0;
         justify-content: center;
-        height: 80px;
+        height: 60px;
         border-bottom: 1px solid #374557;
     }
 
@@ -28,7 +28,7 @@ export const Container = styled.div`
         padding-left: 60px;
 
         @media screen and (max-width: 1025px){
-            font-size: 26px;
+            font-size: 22px;
             line-height: 28px;
             padding-left: 0px;
         }

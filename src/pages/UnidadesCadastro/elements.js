@@ -11,7 +11,7 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding:  120px 20px 140px 20px;
+        padding:  100px 20px 140px 20px;
     }
 
     h1{
