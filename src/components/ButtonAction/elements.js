@@ -18,4 +18,9 @@ export const Button = styled.button`
     cursor: pointer;
     font-weight: 500;
     box-shadow: 0px 20px 50px rgba(55, 69, 87, 0.1);
+
+    
+    @media screen and (max-width: 580px){
+        height: 45px;
+    }
 `

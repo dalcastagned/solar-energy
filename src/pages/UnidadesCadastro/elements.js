@@ -11,7 +11,7 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding:  100px 20px 140px 20px;
+        padding:  65px 20px 65px 20px;
     }
 
     h1{
@@ -22,7 +22,7 @@ export const Container = styled.div`
         padding: 0 20px 60px 0;
 
     @media screen and (max-width: 980px){
-        padding: 0 0 40px 0;
+        padding: 0 0 20px 0;
         text-align: center;
     }
     }

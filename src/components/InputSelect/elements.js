@@ -16,6 +16,10 @@ export const Label = styled.label`
     font-size: 32px;
     color: #53575D;
     font-weight: 700;
+ 
+    @media screen and (max-width: 580px){
+        font-size: 24px;
+    }
 `
 
 export const InputItem = styled.select`
@@ -28,6 +32,10 @@ export const InputItem = styled.select`
     background: transparent;
     padding-left: 10px;
     cursor: pointer;
+    
+    @media screen and (max-width: 580px){
+            font-size: 20px;
+        }
 `
 export const Option = styled.option`
     color: #A098AE;

@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const instance = axios.create({
-  baseURL: "https://json-server-solar-energy.herokuapp.com",
+  baseURL: "http://localhost:3333",
 });
 
 export const getInfo = (url) => {

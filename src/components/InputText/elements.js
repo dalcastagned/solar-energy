@@ -28,6 +28,10 @@ export const InputItem = styled.input`
     width: 100%;
     background: transparent;
     padding-left: 10px;
+
+    @media screen and (max-width: 580px){
+        font-size: 20px;
+    }
 `
 
 export const ErrorText = styled.p`

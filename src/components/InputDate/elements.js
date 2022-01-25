@@ -18,6 +18,11 @@ export const Container = styled.div`
         line-height: 21px;
         width: 100%;
         outline: none;
+        background: transparent;
+
+        @media screen and (max-width: 580px){
+            font-size: 20px;
+        }
     }
 `
 
@@ -25,4 +30,8 @@ export const Label = styled.label`
     font-size: 32px;
     color: #53575D;
     font-weight: 700;
+
+    @media screen and (max-width: 580px){
+        font-size: 24px;
+    }
 `

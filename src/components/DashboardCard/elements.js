@@ -13,6 +13,11 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    
+    @media screen and (max-width: 580px){
+        max-width: 160px;
+        height: 100px;
+    }
 
     &:hover{   
         border: 1px solid #3751FF;
@@ -30,6 +35,10 @@ export const Container = styled.div`
         font-size: 19px;
         font-weight: 700;
         color: #9FA2B4;
+
+    @media screen and (max-width: 580px){
+        font-size: 16px;
+    }
     }
 
     p{
@@ -37,6 +46,10 @@ export const Container = styled.div`
         font-weight: 700;
         color: #252733;
         padding-top: 12px;
+        
+    @media screen and (max-width: 580px){
+        font-size: 22px;
+    }
     }
 
     span {
