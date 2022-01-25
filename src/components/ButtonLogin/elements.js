@@ -17,4 +17,8 @@ export const Button = styled.button`
     border: none;
     cursor: pointer;
     font-weight: 500;
+
+    @media screen and (max-width: 580px){
+        height: 50px;
+    }
 `

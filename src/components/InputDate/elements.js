@@ -21,7 +21,7 @@ export const Container = styled.div`
         background: transparent;
 
         @media screen and (max-width: 580px){
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 `
@@ -32,6 +32,6 @@ export const Label = styled.label`
     font-weight: 700;
 
     @media screen and (max-width: 580px){
-        font-size: 24px;
+        font-size: 20px;
     }
 `

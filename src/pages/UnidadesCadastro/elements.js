@@ -21,10 +21,15 @@ export const Container = styled.div`
         color: #374557;
         padding: 0 20px 60px 0;
 
-    @media screen and (max-width: 980px){
-        padding: 0 0 20px 0;
-        text-align: center;
-    }
+        @media screen and (max-width: 980px){
+            padding: 0 0 20px 0;
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 580px){
+            font-size: 22px;
+            line-height: 25px;
+        }
     }
 `
 

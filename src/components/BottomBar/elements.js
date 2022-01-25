@@ -10,7 +10,7 @@ export const NavMobile = styled.nav`
     font-size: 20px;
     position: fixed;
     bottom: 0;
-    border-top: 1px solid #374557;
+    border-top: 2px solid #374557;
     z-index: 999;
     width: 100%;
  
@@ -25,19 +25,24 @@ export const NavMenuMobile = styled.ul`
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
+    
 `
 
 export const NavItemMobile = styled.li`
-    height: 45px;
+    height: 43px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: ${({$border}) => ($border ? `1px solid #374557` : 'none')};
+    border-right: ${({$border}) => ($border ? `2px solid #374557` : 'none')};
     background: ${({active}) => active ? '#4CBC9A' : 'transparent'};
+    
+    .icon{       
+        color: ${({active}) => active ? '#fff' : '#374557'};
+        font-size: 32px;
+    }
 `
 
 export const NavLinksMobile = styled(Link)`
-    color: #374557;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,10 +57,5 @@ export const NavLinksMobile = styled(Link)`
         display: flex;
         align-items: center;
         justify-content: center;  
-    }
-
-    .icon{       
-        color: #374557;
-        font-size: 35px;
     }
 `

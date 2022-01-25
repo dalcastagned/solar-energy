@@ -17,6 +17,10 @@ export const Label = styled.label`
     font-size: 24px;
     color: #53575D;
     font-weight: 700;
+
+    @media screen and (max-width: 580px){
+        font-size: 20px;
+    }
 `
 
 export const InputItem = styled.input`
@@ -30,7 +34,7 @@ export const InputItem = styled.input`
     padding-left: 10px;
 
     @media screen and (max-width: 580px){
-        font-size: 20px;
+        font-size: 16px;
     }
 `
 

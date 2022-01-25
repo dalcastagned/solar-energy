@@ -9,12 +9,20 @@ export const Container = styled.fieldset`
     border-radius: 10px;
     height: 70px;
     width: 100%;
+ 
+    @media screen and (max-width: 580px){
+            height: 50px;
+    }
 
     i {
         display: flex;
         align-items: center;
         font-size: 28px;
         color: #A098AE;
+
+        @media screen and (max-width: 580px){
+            margin-top: 10px;
+        }
     }
 
     input {
@@ -27,6 +35,10 @@ export const Container = styled.fieldset`
         font-size: 16px;
         width: 100%;
         background: transparent;
+
+        @media screen and (max-width: 580px){
+            margin-top: 10px;
+        }
     }
 
     legend {

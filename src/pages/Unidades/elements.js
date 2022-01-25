@@ -20,6 +20,11 @@ export const Container = styled.div`
         @media screen and (max-width: 750px){
             text-align: center;
         }
+
+        @media screen and (max-width: 580px){
+            font-size: 22px;
+            line-height: 25px;
+        }
     }
 `
 

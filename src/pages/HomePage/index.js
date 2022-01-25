@@ -68,7 +68,7 @@ const HomePage = () => {
                     <InputLogin
                         errorMessage={emailError}
                         icon={<AiOutlineMail />}
-                        errorText='E-mail Obrigatório'
+                        errorText='E-mail Inválido'
                         onChange={(e) => {
                             setEmail(e.target.value)
                             setEmailError(false)
@@ -81,7 +81,7 @@ const HomePage = () => {
                     <InputLogin
                         errorMessage={passwordError}
                         icon={<CgLock />}
-                        errorText='Senha de 6 Digitos Obrigatória'
+                        errorText='Senha Inválida'
                         onChange={(e) => {
                             setPassword(e.target.value)
                             setPasswordError(false)

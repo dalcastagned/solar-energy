@@ -17,7 +17,7 @@ export const ContainerInfo = styled.div`
     img{
         max-width: 280px;   
 
-    @media screen and (max-width: 320px){
+    @media screen and (max-width: 480px){
         max-width: 180px;  
     }
     }

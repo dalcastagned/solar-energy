@@ -9,7 +9,6 @@ export const Container = styled.div`
     top: 0;
     left: 345px;
     background: #fff;
-    margin-left: 1px solid black;
     z-index: 999;   
     
     @media screen and (max-width: 1024px){
@@ -17,7 +16,18 @@ export const Container = styled.div`
         left: 0;
         justify-content: center;
         height: 45px;
-        border-bottom: 1px solid #374557;
+        border-bottom: 2px solid #374557;
+        display: ${({ visible }) => (visible ? `grid` : 'none')};
+        grid-template-columns: 45px 1fr 45px;  
+    }
+
+    img {
+        display: none;
+
+        @media screen and (max-width: 1024px){
+            display: block;
+            margin: 0 auto;
+        }
     }
 
     h1 {
@@ -31,6 +41,12 @@ export const Container = styled.div`
             font-size: 20px;
             line-height: 22px;
             padding-left: 0px;
+        }
+
+        
+        @media screen and (max-width: 380px){
+            font-size: 18px;
+            line-height: 20px;
         }
     }
     
