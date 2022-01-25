@@ -10,12 +10,14 @@ import Geracao from "./pages/Geracao";
 import BottomBar from './components/BottomBar';
 import SideMenu from './components/SideMenu';
 import TopBar from './components/TopBar';
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
     <Container>
       <Router>
         <GlobalStyle />
+        <ScrollToTop />
         <TopBar />
         <SideMenu />
         <BottomBar />
