@@ -31,8 +31,10 @@ const Unidades = () => {
     function handleRemove(id) {
         deleteInfo(
             `/unidades/${id}`,
-        )
-        setUpdateUnits(!updateUnits)
+        ).then(() => {
+            setUpdateUnits(!updateUnits)
+        })
+
     }
 
     return (
@@ -40,9 +42,9 @@ const Unidades = () => {
             <h1>Lista de unidades</h1>
             <Table data={units} handleRemove={handleRemove} />
             <ContainerCard>
-                {React.Children.toArray(units.map(unity =>(
-                    <CardUnity unity={unity} handleRemove={handleRemove}/>
-                )))}   
+                {React.Children.toArray(units.map(unity => (
+                    <CardUnity unity={unity} handleRemove={handleRemove} />
+                )))}
             </ContainerCard>
             <ContainerButton>
                 <ButtonAction text="Nova Unidade" onClick={() => navigate('/unidades/cadastro')} />

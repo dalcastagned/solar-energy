@@ -25,24 +25,24 @@ export const ContainerTop = styled.div`
     }
 `
 
-export const ContainerButtons = styled.div`
-    position: absolute;
-    right: 10px;
-    top: 9px;
-
-    button {
-        border: none;
-        background-color: transparent;
-        color: #000;
-        font-size: 25px;
-        cursor: pointer;
-        padding-left: 5px;
-    }
-`
-
 export const ContainerInfo = styled.div`
     border: 2px solid rgba(232, 232, 232, 0.8);
     border-radius: 0 0 10px 10px;
+
+    div {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        padding: 10px;
+    }
+    
+    &:hover div {
+        opacity: 1;
+        transition: max-height 0.25s ease-in;
+        max-height: 500px;
+        }
+
 
     p {
         padding: 10px;

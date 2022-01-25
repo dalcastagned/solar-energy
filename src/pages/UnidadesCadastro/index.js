@@ -62,8 +62,9 @@ const UnidadesCadastro = () => {
                     model: model,
                     active: active
                 }
-            )
-            navigate('/unidades')
+            ).then(() => {
+                navigate('/unidades')
+            })
         }
     }
 
@@ -91,12 +92,9 @@ const UnidadesCadastro = () => {
                     model: model,
                     active: active
                 }
-            )
-                setNickname('')
-                setPlace('')
-                setBrand('')
-                setModel('')
-                setActive(false)
+            ).then(() => {
+                navigate('/unidades')
+            })
         }
     }
 
