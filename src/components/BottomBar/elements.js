@@ -29,7 +29,7 @@ export const NavMenuMobile = styled.ul`
 `
 
 export const NavItemMobile = styled.li`
-    height: 43px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
