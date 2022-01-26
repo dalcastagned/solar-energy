@@ -23,14 +23,6 @@
       "brand": "Resun",
       "model": "120kW",
       "active": true
-    },
-    {
-      "id": "08a9c22b-4448-42f7-95ad-670e29cabede",
-      "nickname": "Usina 6",
-      "place": "Rua 6",
-      "brand": "Resun",
-      "model": "150kW",
-      "active": true
     }
   ],
   "geracao": [
@@ -112,11 +104,11 @@
       "kw": "84"
     },
     {
-      "id": "7b64dc19-2313-4d25-9c0b-f541b1680ee3",
-      "idUnity": "08a9c22b-4448-42f7-95ad-670e29cabede",
-      "unity": "Usina 6",
-      "date": "2022-01-01T18:26:05.000Z",
-      "kw": "150"
+      "id": "8cbdf7bd-673d-4138-9fec-0a9938e12616",
+      "idUnity": "da67a627-2783-4332-bd27-24243b22c1b1",
+      "unity": "Usina 1",
+      "date": "2022-01-01T23:04:26.000Z",
+      "kw": "50"
     }
   ]
 }

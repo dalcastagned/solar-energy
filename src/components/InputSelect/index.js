@@ -8,8 +8,8 @@ const InputSelect = ({ label, errorMessage, errorText, options, ...otherProps })
             <S.Label>{label}</S.Label>
             <S.Container errorMessage={errorMessage}>
                 <S.ErrorText errorMessage={errorMessage}>{errorText}</S.ErrorText>
-                <S.InputItem {...otherProps}>
-                    <S.Option value=''>Selecione</S.Option>
+                <S.InputItem  {...otherProps}>
+                    <S.Option disabled value=''>Selecione</S.Option>
                     {React.Children.toArray(options.map(item =>
                         <S.Option value={item}>{item}</S.Option>
                     ))}
