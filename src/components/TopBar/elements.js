@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     width: calc(100vw - 345px);
     height: 120px;
-    display: ${({ visible }) => (visible ? `flex` : 'none')};
+    display: flex;
     align-items: center;
     position: fixed;
     top: 0;
@@ -17,7 +17,7 @@ export const Container = styled.div`
         justify-content: center;
         height: 45px;
         border-bottom: 2px solid #374557;
-        display: ${({ visible }) => (visible ? `grid` : 'none')};
+        display: grid;
         grid-template-columns: 45px 1fr 45px;  
     }
 

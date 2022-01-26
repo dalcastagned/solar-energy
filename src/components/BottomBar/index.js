@@ -1,4 +1,4 @@
-import React from 'react';import {
+import React from 'react'; import {
     NavMobile,
     NavLinksMobile,
     NavMenuMobile,
@@ -12,42 +12,46 @@ import { useLocation } from 'react-router-dom';
 
 const BottomBar = () => {
 
-    const {pathname} = useLocation()
+    const { pathname } = useLocation()
 
-    return (
-        <NavMobile visible={pathname !== '/'}>
-            <NavMenuMobile>
-                <NavItemMobile active={pathname === '/dashboard'} $border={true}>
-                    <NavLinksMobile to='/dashboard'>
-                        <div>
-                            <FaChartPie className='icon' />
-                        </div>
-                    </NavLinksMobile>
-                </NavItemMobile>
-                <NavItemMobile active={pathname.search("unidades") !== -1} $border={true}>
-                    <NavLinksMobile to='/unidades'>
-                        <div>
-                            <MdShowChart className='icon' />
-                        </div>
-                    </NavLinksMobile>
-                </NavItemMobile>
-                <NavItemMobile active={pathname === '/geracao/cadastro'} $border={true}>
-                    <NavLinksMobile to='/geracao/cadastro'>
-                        <div>
-                            <BsGearFill className='icon' />
-                        </div>
-                    </NavLinksMobile>
-                </NavItemMobile>
-                <NavItemMobile $border={false}>
-                    <NavLinksMobile to='/'>
-                        <div>
-                            <BiLogOut className='icon' />
-                        </div>
-                    </NavLinksMobile>
-                </NavItemMobile>
-            </NavMenuMobile>
-        </NavMobile>
-    )
+    if (pathname === '/') {
+        return null
+    } else {
+        return (
+            <NavMobile>
+                <NavMenuMobile>
+                    <NavItemMobile active={pathname === '/dashboard'} $border={true}>
+                        <NavLinksMobile to='/dashboard'>
+                            <div>
+                                <FaChartPie className='icon' />
+                            </div>
+                        </NavLinksMobile>
+                    </NavItemMobile>
+                    <NavItemMobile active={pathname.search("unidades") !== -1} $border={true}>
+                        <NavLinksMobile to='/unidades'>
+                            <div>
+                                <MdShowChart className='icon' />
+                            </div>
+                        </NavLinksMobile>
+                    </NavItemMobile>
+                    <NavItemMobile active={pathname === '/geracao/cadastro'} $border={true}>
+                        <NavLinksMobile to='/geracao/cadastro'>
+                            <div>
+                                <BsGearFill className='icon' />
+                            </div>
+                        </NavLinksMobile>
+                    </NavItemMobile>
+                    <NavItemMobile $border={false}>
+                        <NavLinksMobile to='/'>
+                            <div>
+                                <BiLogOut className='icon' />
+                            </div>
+                        </NavLinksMobile>
+                    </NavItemMobile>
+                </NavMenuMobile>
+            </NavMobile>
+        )
+    }
 };
 
 export default BottomBar;

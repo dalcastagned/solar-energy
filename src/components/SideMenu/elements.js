@@ -10,7 +10,7 @@ export const Container = styled.div`
     top: 0;
     left: 0;
     background: #fff;
-    display: ${({visible}) => (visible ? `flex` : 'none')};
+    display: flex;
 
     img {
         width: 159px;

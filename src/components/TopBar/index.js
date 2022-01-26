@@ -5,16 +5,20 @@ import logo from '../../images/mini_logo.png'
 
 const TopBar = () => {
 
-    const {pathname} = useLocation()
+    const { pathname } = useLocation()
     const title = (pathname === '/dashboard' ? 'Dasboard' : pathname.search("unidades") !== -1 ? 'Unidades' : pathname === '/geracao/cadastro' && 'Lançamento Mensal')
-    
-    return (
-        <Container visible={pathname !== '/'}>
-            <img src={logo} alt='Logo' />
-            <h1>{title}</h1>
-            <img src={logo} alt='Logo' />
-        </Container>
-    )
+
+    if (pathname === '/') {
+        return null
+    } else {
+        return (
+            <Container>
+                <img src={logo} alt='Logo' />
+                <h1>{title}</h1>
+                <img src={logo} alt='Logo' />
+            </Container>
+        )
+    }
 };
 
 export default TopBar;

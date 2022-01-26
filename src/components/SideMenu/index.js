@@ -9,16 +9,20 @@ import { useLocation } from 'react-router-dom';
 
 const SideMenu = () => {
 
-    const {pathname} = useLocation()
+    const { pathname } = useLocation()
 
-    return (
-        <Container visible={pathname !== '/'}>
-            <img src={logo} alt='Logo' />
-            <ButtonMenu route='/dashboard' icon={<FaChartPie />} text='Dashboard' active={pathname === '/dashboard'} />
-            <ButtonMenu route='/unidades' icon={<MdShowChart />} text='Unidade consumidora' active={pathname.search("unidades") !== -1} />
-            <ButtonMenu route='/geracao/cadastro' icon={<BsGearFill />} text='Cadastro de energia gerada' active={pathname === '/geracao/cadastro'} />
-        </Container>
-    )
+    if (pathname === '/') {
+        return null
+    } else {
+        return (
+            <Container>
+                <img src={logo} alt='Logo' />
+                <ButtonMenu route='/dashboard' icon={<FaChartPie />} text='Dashboard' active={pathname === '/dashboard'} />
+                <ButtonMenu route='/unidades' icon={<MdShowChart />} text='Unidade consumidora' active={pathname.search("unidades") !== -1} />
+                <ButtonMenu route='/geracao/cadastro' icon={<BsGearFill />} text='Cadastro de energia gerada' active={pathname === '/geracao/cadastro'} />
+            </Container>
+        )
+    }
 };
 
 export default SideMenu;
