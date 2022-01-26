@@ -35,7 +35,7 @@ npm start
 ## Uso
 
 ```sh
-Abra [http://localhost:3000](http://localhost:3000) para visualizar no seu browser
+Abra http://localhost:3000 para visualizar no seu browser
 ```
 
 ### 🛠 Tecnologias
