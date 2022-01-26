@@ -1,11 +1,12 @@
 import React from 'react';
-import { Container, Button } from './elements';
+
+import * as S from './elements';
 
 const ButtonEdit = ({onClick}) => {
     return (
-        <Container>
-            <Button onClick={onClick}>Editar</Button>
-        </Container>
+        <S.Container>
+            <S.Button onClick={onClick}>Editar</S.Button>
+        </S.Container>
     )
 };
 

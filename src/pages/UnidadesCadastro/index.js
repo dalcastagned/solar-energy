@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+
 import toast from 'react-hot-toast';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+
+import { getInfo, setInfo, updateInfo } from '../../services/Api';
 import ButtonAction from '../../components/ButtonAction';
 import InputCheckbox from '../../components/InputCheckbox';
 import InputText from '../../components/InputText';
-import { getInfo, setInfo, updateInfo } from '../../services/Api';
-import { Container, Form } from './elements';
+import * as S from './elements';
 
 const UnidadesCadastro = () => {
 
@@ -99,9 +101,9 @@ const UnidadesCadastro = () => {
     }
 
     return (
-        <Container>
+        <S.Container>
             <h1>{title}</h1>
-            <Form onSubmit={pathname === '/unidades/cadastro' ? handleSubmit : handleUpdate}>
+            <S.Form onSubmit={pathname === '/unidades/cadastro' ? handleSubmit : handleUpdate}>
                 <InputText
                     label='Apelido'
                     errorMessage={error.nicknameError}
@@ -159,8 +161,8 @@ const UnidadesCadastro = () => {
                     text={titleButton}
                     type='submit'
                 />
-            </Form>
-        </Container>
+            </S.Form>
+        </S.Container>
     )
 };
 

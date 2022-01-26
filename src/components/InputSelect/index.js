@@ -1,25 +1,20 @@
 import React from 'react';
-import {
-    Container,
-    Label,
-    InputItem,
-    ErrorText,
-    Option
-} from './elements'
+
+import * as S from './elements'
 
 const InputSelect = ({ label, errorMessage, errorText, options, ...otherProps }) => {
     return (
         <>
-            <Label>{label}</Label>
-            <Container errorMessage={errorMessage}>
-                <ErrorText errorMessage={errorMessage}>{errorText}</ErrorText>
-                <InputItem {...otherProps}>
-                    <Option value=''>Selecione</Option>
+            <S.Label>{label}</S.Label>
+            <S.Container errorMessage={errorMessage}>
+                <S.ErrorText errorMessage={errorMessage}>{errorText}</S.ErrorText>
+                <S.InputItem {...otherProps}>
+                    <S.Option value=''>Selecione</S.Option>
                     {React.Children.toArray(options.map(item =>
-                        <Option value={item}>{item}</Option>
+                        <S.Option value={item}>{item}</S.Option>
                     ))}
-                </InputItem>
-            </Container>
+                </S.InputItem>
+            </S.Container>
         </>
     )
 };

@@ -1,14 +1,12 @@
-import React from 'react'; import {
-    NavMobile,
-    NavLinksMobile,
-    NavMenuMobile,
-    NavItemMobile,
-} from './elements'
+import React from 'react'; 
+
 import { FaChartPie } from "react-icons/fa";
 import { MdShowChart } from "react-icons/md";
 import { BsGearFill } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { useLocation } from 'react-router-dom';
+
+import * as S from './elements'
 
 const BottomBar = () => {
 
@@ -18,38 +16,38 @@ const BottomBar = () => {
         return null
     } else {
         return (
-            <NavMobile>
-                <NavMenuMobile>
-                    <NavItemMobile active={pathname === '/dashboard'} $border={true}>
-                        <NavLinksMobile to='/dashboard'>
+            <S.NavMobile>
+                <S.NavMenuMobile>
+                    <S.NavItemMobile active={pathname === '/dashboard'} $border={true}>
+                        <S.NavLinksMobile to='/dashboard'>
                             <div>
                                 <FaChartPie className='icon' />
                             </div>
-                        </NavLinksMobile>
-                    </NavItemMobile>
-                    <NavItemMobile active={pathname.search("unidades") !== -1} $border={true}>
-                        <NavLinksMobile to='/unidades'>
+                        </S.NavLinksMobile>
+                    </S.NavItemMobile>
+                    <S.NavItemMobile active={pathname.search("unidades") !== -1} $border={true}>
+                        <S.NavLinksMobile to='/unidades'>
                             <div>
                                 <MdShowChart className='icon' />
                             </div>
-                        </NavLinksMobile>
-                    </NavItemMobile>
-                    <NavItemMobile active={pathname === '/geracao/cadastro'} $border={true}>
-                        <NavLinksMobile to='/geracao/cadastro'>
+                        </S.NavLinksMobile>
+                    </S.NavItemMobile>
+                    <S.NavItemMobile active={pathname === '/geracao/cadastro'} $border={true}>
+                        <S.NavLinksMobile to='/geracao/cadastro'>
                             <div>
                                 <BsGearFill className='icon' />
                             </div>
-                        </NavLinksMobile>
-                    </NavItemMobile>
-                    <NavItemMobile $border={false}>
-                        <NavLinksMobile to='/'>
+                        </S.NavLinksMobile>
+                    </S.NavItemMobile>
+                    <S.NavItemMobile $border={false}>
+                        <S.NavLinksMobile to='/'>
                             <div>
                                 <BiLogOut className='icon' />
                             </div>
-                        </NavLinksMobile>
-                    </NavItemMobile>
-                </NavMenuMobile>
-            </NavMobile>
+                        </S.NavLinksMobile>
+                    </S.NavItemMobile>
+                </S.NavMenuMobile>
+            </S.NavMobile>
         )
     }
 };

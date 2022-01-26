@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+
 import toast from 'react-hot-toast';
+
 import Chart from '../../components/Chart';
 import DashboardCards from '../../components/DashboardCard';
 import { getInfo } from '../../services/Api';
-import { Container, Cards, ContainerChart } from './elements';
+import * as S from './elements';
 
 const Dashboard = () => {
 
@@ -97,7 +99,7 @@ const Dashboard = () => {
                 getActiveUnits(data)
             })
             .catch(() => {
-                toast.error('Erro ao buscar dados')
+                toast.error('Erro ao buscar dados das unidades')
             });
 
         getInfo("/geracao")
@@ -105,24 +107,24 @@ const Dashboard = () => {
                 getMonthlyGeneration(data)
             })
             .catch(() => {
-                toast.error('Erro ao buscar dados')
+                toast.error('Erro ao buscar dados de geração')
             });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
-        <Container>
-            <Cards>
+        <S.Container>
+            <S.Cards>
                 <DashboardCards text='Total Unidades' value={units.length} measure='' />
                 <DashboardCards text='Unidades Ativas' value={activeUnits.length} measure='' />
                 <DashboardCards text='Unidades Inativas' value={units.length - activeUnits.length} measure='' />
                 <DashboardCards text='Média de Energia' value={averageGeneration.toFixed(2)} measure='kW' />
-            </Cards>
-            <ContainerChart>
+            </S.Cards>
+            <S.ContainerChart>
                 <h1>Total de energia gerada por mês</h1>
                 <Chart labels={last12MonthText} dataPlot={monthlyGeneration} />
-            </ContainerChart>
-        </Container>
+            </S.ContainerChart>
+        </S.Container>
     )
 };
 

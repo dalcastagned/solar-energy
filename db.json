@@ -22,7 +22,7 @@
       "place": "Santa Catarina",
       "brand": "Resun",
       "model": "120kW",
-      "active": false
+      "active": true
     }
   ],
   "geracao": [
@@ -88,6 +88,20 @@
       "unity": "Usina 3",
       "date": "2021-08-01T22:22:14.000Z",
       "kw": "25"
+    },
+    {
+      "id": "4bbde2a1-03a2-46df-89ca-6e1e4115f8a2",
+      "idUnity": "78ea99ca-ae6e-4f10-8268-8e983e6e2473",
+      "unity": "Usina 3",
+      "date": "2021-07-01T16:16:15.000Z",
+      "kw": "65"
+    },
+    {
+      "id": "ebf6110f-9a6b-443b-a3e1-d7dfd07ea279",
+      "idUnity": "78ea99ca-ae6e-4f10-8268-8e983e6e2473",
+      "unity": "Usina 3",
+      "date": "2021-06-01T16:16:53.000Z",
+      "kw": "84"
     }
   ]
 }

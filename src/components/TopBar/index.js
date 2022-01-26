@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { useLocation } from 'react-router-dom';
-import { Container } from './elements';
+
 import logo from '../../images/mini_logo.png'
+import * as S from './elements';
 
 const TopBar = () => {
 
@@ -12,11 +14,11 @@ const TopBar = () => {
         return null
     } else {
         return (
-            <Container>
+            <S.Container>
                 <img src={logo} alt='Logo' />
                 <h1>{title}</h1>
                 <img src={logo} alt='Logo' />
-            </Container>
+            </S.Container>
         )
     }
 };

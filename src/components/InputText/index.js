@@ -1,19 +1,15 @@
 import React from 'react';
-import {
-    Container,
-    Label,
-    InputItem,
-    ErrorText,
-} from './elements'
+
+import * as S from './elements'
 
 const InputText = ({ label, errorMessage, errorText, smallInput, ...otherProps }) => {
     return (
         <div>
-            <Label>{label}</Label>
-            <Container smallInput={smallInput} errorMessage={errorMessage}>
-                <ErrorText errorMessage={errorMessage}>{errorText}</ErrorText>
-                <InputItem type="text" {...otherProps} />
-            </Container>
+            <S.Label>{label}</S.Label>
+            <S.Container smallInput={smallInput} errorMessage={errorMessage}>
+                <S.ErrorText errorMessage={errorMessage}>{errorText}</S.ErrorText>
+                <S.InputItem type="text" {...otherProps} />
+            </S.Container>
         </div>
     )
 };

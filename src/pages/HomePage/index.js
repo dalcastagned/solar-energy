@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
+
 import { useNavigate } from "react-router";
+import { AiOutlineMail } from "react-icons/ai";
+import { CgLock } from "react-icons/cg";
+
 import logo from '../../images/logo.png'
 import InputLogin from '../../components/InputLogin'
 import ButtonLogin from '../../components/ButtonLogin'
-import { AiOutlineMail } from "react-icons/ai";
-import { CgLock } from "react-icons/cg";
-import {
-    Container,
-    ContainerInfo,
-    ContainerLogin,
-    ContainerImage,
-    Form
-} from './elements'
+import * as S from './elements'
 
 const HomePage = () => {
 
@@ -57,14 +53,14 @@ const HomePage = () => {
 
     }
     return (
-        <Container>
-            <ContainerImage />
-            <ContainerLogin>
-                <ContainerInfo>
+        <S.Container>
+            <S.ContainerImage />
+            <S.ContainerLogin>
+                <S.ContainerInfo>
                     <img src={logo} alt='Logo' />
                     <h1>Seja bem vindo</h1>
-                </ContainerInfo>
-                <Form onSubmit={handleSubmit}>
+                </S.ContainerInfo>
+                <S.Form onSubmit={handleSubmit}>
                     <InputLogin
                         errorMessage={emailError}
                         icon={<AiOutlineMail />}
@@ -92,9 +88,9 @@ const HomePage = () => {
                         placeholder='Senha'
                     />
                     <ButtonLogin />
-                </Form>
-            </ContainerLogin>
-        </Container>
+                </S.Form>
+            </S.ContainerLogin>
+        </S.Container>
     )
 };
 

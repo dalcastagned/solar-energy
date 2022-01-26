@@ -1,11 +1,12 @@
 import React from 'react';
-import { Container, Button } from './elements';
+
+import * as S from './elements';
 
 const ButtonLogin = () => {
     return (
-        <Container>
-            <Button type='submit'>Entrar</Button>
-        </Container>
+        <S.Container>
+            <S.Button type='submit'>Entrar</S.Button>
+        </S.Container>
     )
 };
 

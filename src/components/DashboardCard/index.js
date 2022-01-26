@@ -1,13 +1,14 @@
 import React from "react";
-import { Container } from "./elements";
+
+import * as S from "./elements";
 
 const DashboardCards = ({text, value, measure}) => {
 
     return (
-        <Container>
+        <S.Container>
             <h2>{text}</h2>
             <p>{value}{measure !== '' && <span>{measure}</span>}</p>
-        </Container>
+        </S.Container>
     )
 };
 

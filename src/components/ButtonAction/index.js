@@ -1,11 +1,12 @@
 import React from 'react';
-import { Container, Button } from './elements';
+
+import * as S from './elements';
 
 const ButtonAction = ({text, ...otherProps}) => {
     return (
-        <Container>
-            <Button {...otherProps} >{text}</Button>
-        </Container>
+        <S.Container>
+            <S.Button {...otherProps} >{text}</S.Button>
+        </S.Container>
     )
 };
 

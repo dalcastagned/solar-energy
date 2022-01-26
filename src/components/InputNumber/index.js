@@ -1,19 +1,15 @@
 import React from 'react';
-import {
-    Container,
-    Label,
-    InputItem,
-    ErrorText,
-} from './elements'
+
+import * as S from './elements'
 
 const InputNumber = ({ label, errorMessage, errorText, ...otherProps }) => {
     return (
         <>
-            <Label>{label}</Label>
-            <Container errorMessage={errorMessage}>
-                <ErrorText errorMessage={errorMessage}>{errorText}</ErrorText>
-                <InputItem type="number" {...otherProps} />
-            </Container>
+            <S.Label>{label}</S.Label>
+            <S.Container errorMessage={errorMessage}>
+                <S.ErrorText errorMessage={errorMessage}>{errorText}</S.ErrorText>
+                <S.InputItem type="number" {...otherProps} />
+            </S.Container>
         </>
     )
 };

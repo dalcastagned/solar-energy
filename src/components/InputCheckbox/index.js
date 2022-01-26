@@ -1,19 +1,16 @@
 import React from 'react';
-import {
-    Container,
-    Label,
-    InputItem,
-} from './elements'
+
+import * as S from './elements'
 
 const InputCheckbox = ({ label, ...otherProps }) => {
     return (
         <>
-            <Container>
-                <Label>
-                    <InputItem type="checkbox" {...otherProps} />
+            <S.Container>
+                <S.Label>
+                    <S.InputItem type="checkbox" {...otherProps} />
                     {label}
-                </Label>
-            </Container>
+                </S.Label>
+            </S.Container>
         </>
     )
 };

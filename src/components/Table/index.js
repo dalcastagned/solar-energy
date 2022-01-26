@@ -1,21 +1,18 @@
 import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
+
 import ButtonEdit from '../ButtonEdit';
 import ButtonRemove from '../ButtonRemove';
-import {
-    TableContainer,
-    Thead,
-    Tr,
-    TdButtons
-} from './elements'
+import * as S from './elements'
 
 const Table = ({ data, handleRemove }) => {
 
     const navigate = useNavigate();
 
     return (
-        <TableContainer>
-            <Thead>
+        <S.TableContainer>
+            <S.Thead>
                 <tr>
                     <th>ID</th>
                     <th>Apelido</th>
@@ -26,27 +23,27 @@ const Table = ({ data, handleRemove }) => {
                     <th></th>
                     <th></th>
                 </tr>
-            </Thead>
+            </S.Thead>
             <tbody>
                 {React.Children.toArray(data.map(data => (
-                    <Tr>
+                    <S.Tr>
                         <td>{data.id.substring(0, 3) + "..."}</td>
                         <td>{data.nickname}</td>
                         <td>{data.place}</td>
                         <td>{data.brand}</td>
                         <td>{data.model}</td>
                         <td>{data.active ? "Ativo" : "Inativo"}</td>
-                        <TdButtons>
+                        <S.TdButtons>
                             <ButtonEdit onClick={() => navigate(`/unidades/edicao/${data.id}`)} />
-                        </TdButtons>
-                        <TdButtons>
+                        </S.TdButtons>
+                        <S.TdButtons>
                             <ButtonRemove onClick={() => handleRemove(data.id)} />
-                        </TdButtons>
-                    </Tr>
+                        </S.TdButtons>
+                    </S.Tr>
                 )))}
 
             </tbody>
-        </TableContainer>
+        </S.TableContainer>
     )
 };
 

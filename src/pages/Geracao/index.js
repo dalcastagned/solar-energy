@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import ButtonAction from '../../components/ButtonAction';
+
+import { v4 as uuidv4 } from 'uuid';
+import toast from 'react-hot-toast';
+
 import { getInfo, setInfo } from '../../services/Api';
-import { Container, Form } from './elements';
+import ButtonAction from '../../components/ButtonAction';
 import InputSelect from '../../components/InputSelect';
 import InputNumber from '../../components/InputNumber';
 import InputDate from '../../components/InputDate';
-import { v4 as uuidv4 } from 'uuid';
-import toast from 'react-hot-toast';
+import * as S from './elements';
 
 const UnidadesCadastro = () => {
 
@@ -16,21 +18,15 @@ const UnidadesCadastro = () => {
     const [date, setDate] = useState(new Date())
     const [kw, setKw] = useState('')
     const [error, setError] = useState({})
-    
-    const getActiveUnits = (data) => {
-        const activeUnits = data.filter(item => item.active === true)
-        const options = activeUnits.map(item => item.nickname)
-        setOptions(options)
-    }
 
     useEffect(() => {
-        getInfo("/unidades")
+        getInfo("/unidades?active=true")
             .then((data) => {
                 setUnits(data)
-                getActiveUnits(data)
+                setOptions(data.map(item => item.nickname))
             })
             .catch(() => {
-                toast.error('Erro ao buscar dados')
+                toast.error('Erro ao buscar dados das unidades')
             });
     }, []);
 
@@ -57,13 +53,14 @@ const UnidadesCadastro = () => {
                 }
             )
             setUnity('')
+            setDate(new Date())
             setKw('')
         }
     }
 
     return (
-        <Container>
-            <Form onSubmit={handleSubmit}>
+        <S.Container>
+            <S.Form onSubmit={handleSubmit}>
                 <InputSelect
                     label='Unidade Geradora'
                     errorMessage={error.unityError}
@@ -96,8 +93,8 @@ const UnidadesCadastro = () => {
                     text='Cadastrar'
                     type='submit'
                 />
-            </Form>
-        </Container>
+            </S.Form>
+        </S.Container>
     )
 };
 

@@ -1,25 +1,23 @@
 import React from 'react';
+
+import { useNavigate } from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+
 import ButtonEdit from '../ButtonEdit'
 import ButtonRemove from '../ButtonRemove';
-import {
-    Container,
-    ContainerTop,
-    ContainerInfo
-} from './elements'
-import { useNavigate } from 'react-router-dom';
+import * as S from './elements'
 
 const CardUnity = ({ unity, handleRemove }) => {
 
     const navigate = useNavigate();
 
     return (
-        <Container>
-            <ContainerTop color='red'>
+        <S.Container>
+            <S.ContainerTop color='red'>
                 <p>{unity.nickname}</p>
-            </ContainerTop>
-            <ContainerInfo color='red'>
+            </S.ContainerTop>
+            <S.ContainerInfo color='red'>
                 <p>{`Local: ${unity.place}`}</p>
                 <p>{`Marca: ${unity.brand}`}</p>
                 <p>{`Modelo: ${unity.model}`}</p>
@@ -32,8 +30,8 @@ const CardUnity = ({ unity, handleRemove }) => {
                         <MdDelete />
                     </ButtonRemove>
                 </div>
-            </ContainerInfo>
-        </Container>
+            </S.ContainerInfo>
+        </S.Container>
     )
 };
 

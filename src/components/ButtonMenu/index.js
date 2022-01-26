@@ -1,12 +1,13 @@
 import React from 'react';
-import { Container, Button } from './elements';
+
+import * as S from './elements';
 
 const ButtonMenu = ({icon, text, active, route}) => {
     return (
-        <Container active={active}>
+        <S.Container active={active}>
             <i>{icon}</i>
-            <Button to={route} active={active.toString()}>{text}</Button>
-        </Container>
+            <S.Button to={route} active={active.toString()}>{text}</S.Button>
+        </S.Container>
     )
 };
 
