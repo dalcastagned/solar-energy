@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+<h1 align="center">Bem-Vindo(a) ao projeto DevInHouse Solar Energy 👋</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <img src='https://i.ibb.co/zRfSpcN/solar-energy.gif'>
+</p>
 
-## Available Scripts
+## Descrição do Projeto
+<p align="left">Você está prestes a entrar para o time de desenvolvedores da DevInHouse Solar Energy. Para concretizar a sua contratação, você deverá resolver um desafio utilizando React. O time de recrutamento necessita que você crie uma aplicação protótipo para o gerenciamento de energia, chamada Solar Energy.
+</p>
 
-In the project directory, you can run:
+## Requisitos da Aplicação
+<p align="left">A aplicação deve contemplar os seguintes requisitos:</p>
+<ul>
+    <li>Uma Tela de Login contendo um formulário com campos de email e senha. Os campos de email e senha são obrigatórios ( Validar ao disparar o evento de onSubmit). Ao clicar no botão de Entrar e passar pela validação, redirecionar para tela de Dashboard. Seguir layout conforme o mockup disponibilizado.</li>
+    <li>Um menu lateral, contendo as opções Dashboard, Unidade Consumidora e Cadastro de energia gerada. O menu deve ser configurado usando a lib react-router-dom. Seguir layout conforme o mockup disponibilizado.</li>
+    <li>Uma tela de Dashboard contendo 4 cards: Total de unidades (Exibir o total de unidades cadastradas no json-server), unidades ativas (Exibir total de unidades com status ativo(true) , unidades inativas (Exibir total de unidades com status inativo(false) e média de energia (Soma do total de geração dos ultimos 12 meses / 12).</li>
+    <li>A tela de Dashboard deve conter um gráfico de linha exibindo os meses do ano. O gráfico deverá exibir o total de energia gerado por mês, sendo assim deve-se realizar a soma por mês do total gerado de todas as unidades e exibir no gráfico o total de cada mês, o eixo x deve-se exibir os últimos 12 meses e no eixo y o total por mês Usar a lib https://github.com/reactchartjs/react-chartjs-2. Seguir layout conforme o mockup disponibilizado.</li>
+    <li>Uma tela de Listagem de unidades (consumir rota /unidades do json-server) contendo uma tabela com as colunas ID, apelido, Local, Marca e modelo, além dos botões Editar e Remover. Além disso, a tela deve conter um botão Nova unidade (Ao clicar, enviar usuário para tela de cadastro de unidade). Seguir layout conforme o mockup disponibilizado.</li>
+    <li>Uma tela de cadastro de unidade, contendo um formulário com os campos apelido, Local, Marca, modelo e status (Checkbox). Ao clicar no botão salvar, chamar evento de onSubmit e cadastrar unidade via POST na rota /unidades do json-server. Todos os campos do formulário são obrigatórios. Seguir layout conforme o mockup disponibilizado.</li>
+    <li>Implementar botão de remover unidade na tela de Listagem de unidades. Ao clicar no botão remover, chamar evento de onClick e remover unidade clicada via DELETE na rota /unidades/:id do json-server.</li>
+    <li>Implementar botão de editar unidade, ao clicar no botão de editar, enviar usuário para tela de edição de unidade. Ao renderizar a tela, trazer os campos preenchidos com as informações da unidade clicada, ao clicar em salvar, salvar os valores via PUT na rota /unidades/:id do json-server. Seguir layout conforme o mockup disponibilizado.</li>
+    <li>Implementar tela de Lançamento de geração mensal contendo um formulário com um "Select" (listando como opção as unidades já cadastradas), um campo de data e um campo de total kw gerado (aceita somente números). Ao clicar em salvar, chamar evento de onSubmit e cadastrar valores via POST na rota /geracoes do json-server.</li>
+</ul>
 
-### `npm start`
+## Instalação
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```sh
+npm install
+```
+## Inicialização
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```sh
+npm start
+```
+## Uso
 
-### `npm test`
+```sh
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no seu browser
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🛠 Tecnologias
 
-### `npm run build`
+As seguintes ferramentas foram usadas na construção do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React](https://pt-br.reactjs.org/)
+- [React-Router-Dom](https://v5.reactrouter.com/web/guides/quick-start)
+- [React-Icons](https://react-icons.github.io/react-icons)
+- [React-Datepicker](https://reactdatepicker.com/)
+- [Styled-Components](https://styled-components.com/)
+- [JSON-Server](https://www.npmjs.com/package/json-server)
+- [Axios](https://axios-http.com/docs/intro)
+- [Chart.js](https://www.chartjs.org/)
+- [React-Hot-Toast](https://react-hot-toast.com/)
+### Autor
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a href="https://github.com/dalcastagned">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/65626347?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Daniel Dalcastagne</b></sub></a> <a href="https://github.com/dalcastagned" title="Rocketseat">🚀</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Feito com ❤️ por Daniel Dalcastagne 👋🏽 Entre em contato!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Linkedin Badge](https://img.shields.io/badge/-LINKEDIN-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/daniel-dalcastagne-4baa00179/)](https://www.linkedin.com/in/daniel-dalcastagne-4baa00179/) 
+[![Gmail Badge](https://img.shields.io/badge/-EMAIL-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:contato@danieldalcastagne.com)](mailto:contato@danieldalcastagne.com)
