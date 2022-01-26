@@ -1,7 +1,5 @@
 import GlobalStyle, { Container } from "./styles/globalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import HomePage from './pages/HomePage'
 import Unidades from "./pages/Unidades";
 import Dashboard from "./pages/Dashboard";
@@ -11,6 +9,7 @@ import BottomBar from './components/BottomBar';
 import SideMenu from './components/SideMenu';
 import TopBar from './components/TopBar';
 import ScrollToTop from "./utils/ScrollToTop";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -30,7 +29,10 @@ function App() {
           <Route path="/geracao/cadastro" element={<Geracao />} />
         </Routes>
       </Router>
-      <ToastContainer />
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import ButtonAction from '../../components/ButtonAction';
 import CardUnity from '../../components/CardUnity';
 import Table from '../../components/Table';

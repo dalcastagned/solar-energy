@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 import Chart from '../../components/Chart';
 import DashboardCards from '../../components/DashboardCard';
 import { getInfo } from '../../services/Api';

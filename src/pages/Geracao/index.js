@@ -5,8 +5,8 @@ import { Container, Form } from './elements';
 import InputSelect from '../../components/InputSelect';
 import InputNumber from '../../components/InputNumber';
 import InputDate from '../../components/InputDate';
-import { toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
+import toast from 'react-hot-toast';
 
 const UnidadesCadastro = () => {
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import ButtonAction from '../../components/ButtonAction';
 import InputCheckbox from '../../components/InputCheckbox';
