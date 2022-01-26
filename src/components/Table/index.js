@@ -6,6 +6,7 @@ import {
     TableContainer,
     Thead,
     Tr,
+    TdButtons
 } from './elements'
 
 const Table = ({ data, handleRemove }) => {
@@ -35,12 +36,12 @@ const Table = ({ data, handleRemove }) => {
                         <td>{data.brand}</td>
                         <td>{data.model}</td>
                         <td>{data.active ? "Ativo" : "Inativo"}</td>
-                        <td>
+                        <TdButtons>
                             <ButtonEdit onClick={() => navigate(`/unidades/edicao/${data.id}`)} />
-                        </td>
-                        <td>
+                        </TdButtons>
+                        <TdButtons>
                             <ButtonRemove onClick={() => handleRemove(data.id)} />
-                        </td>
+                        </TdButtons>
                     </Tr>
                 )))}
 

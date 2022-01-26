@@ -27,6 +27,11 @@ export const Tr = styled.tr`
 `
 
 
+export const TdButtons = styled.td`
+    padding-right: 5px;
+`
+
+
 
 
 
