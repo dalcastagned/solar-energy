@@ -29,14 +29,22 @@ const Unidades = () => {
     }, [updateUnits]);
 
     function handleRemove(id) {
-        deleteInfo(
-            `/unidades/${id}`,
-        ).then(() => {
-            setUpdateUnits(!updateUnits)
-        })
-
+        deleteInfo(`/unidades/${id}`)
+            .then(() => {
+                getInfo(`/geracao/?idUnity=${id}`)
+                    .then((data) => {
+                        data.map(data => (
+                            deleteInfo(`/geracao/${data.id}`))
+                        )
+                    })
+                    .catch (() => {return null})               
+                toast.success('Removido com sucesso')
+                setUpdateUnits(!updateUnits)
+            })
+            .catch(() => {
+                toast.error('Erro ao remover')
+            })
     }
-
     return (
         <Container>
             <h1>Lista de unidades</h1>
