@@ -38,7 +38,7 @@ npm start
 Abra http://localhost:3000 para visualizar no seu browser
 ```
 
-### 🛠 Tecnologias
+## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -51,8 +51,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Axios](https://axios-http.com/docs/intro)
 - [Chart.js](https://www.chartjs.org/)
 - [React-Hot-Toast](https://react-hot-toast.com/)
-### Autor
----
+## Autor
 
 <a href="https://github.com/dalcastagned">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/65626347?v=4" width="100px;" alt=""/>
