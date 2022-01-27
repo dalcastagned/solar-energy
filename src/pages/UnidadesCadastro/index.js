@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import toast from 'react-hot-toast';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
 
 import { getInfo, setInfo, updateInfo } from '../../services/Api';
 import ButtonAction from '../../components/ButtonAction';
@@ -25,7 +24,7 @@ const UnidadesCadastro = () => {
     const titleButton = (pathname === '/unidades/cadastro' ? "Salvar" : "Atualizar")
 
     useEffect(() => {
-        if (pathname !== '/unidades/cadastro') {
+        if (pathname.search("unidades/edicao") !== -1) {
             getInfo(`/unidades?id=${params.id}`)
                 .then((data) => {
                     setNickname(data[0].nickname)
@@ -87,7 +86,6 @@ const UnidadesCadastro = () => {
             setInfo(
                 '/unidades',
                 {
-                    id: uuidv4(),
                     nickname: nickname,
                     place: place,
                     brand: brand,

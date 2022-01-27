@@ -1,114 +1,29 @@
 {
   "unidades": [
     {
-      "id": "da67a627-2783-4332-bd27-24243b22c1b1",
       "nickname": "Usina 1",
-      "place": "Bahia",
-      "brand": "Solares",
-      "model": "100kW",
-      "active": true
-    },
-    {
-      "id": "d5db8d86-7f46-427d-8582-ae4ba448baf7",
-      "nickname": "Usina 2",
-      "place": "Pernambuco",
-      "brand": "Resun",
-      "model": "500kW",
-      "active": true
-    },
-    {
-      "id": "78ea99ca-ae6e-4f10-8268-8e983e6e2473",
-      "nickname": "Usina 3",
       "place": "Santa Catarina",
+      "brand": "WEG",
+      "model": "150kW",
+      "active": true,
+      "id": 1
+    },
+    {
+      "nickname": "Usina 2",
+      "place": "São Paulo",
       "brand": "Resun",
       "model": "120kW",
-      "active": true
+      "active": false,
+      "id": 4
     }
   ],
   "geracao": [
     {
-      "id": "ff7ebcf4-7fc4-48da-ae85-db406175eb51",
-      "idUnity": "da67a627-2783-4332-bd27-24243b22c1b1",
+      "idUnity": 1,
       "unity": "Usina 1",
-      "date": "2022-01-24T20:53:56.223Z",
-      "kw": "15"
-    },
-    {
-      "id": "804ae7c6-de7a-4030-9ff7-d1c919a15357",
-      "idUnity": "da67a627-2783-4332-bd27-24243b22c1b1",
-      "unity": "Usina 1",
-      "date": "2021-12-01T21:01:18.000Z",
-      "kw": "50"
-    },
-    {
-      "id": "c2c545c6-ae60-4941-815a-e711022dde01",
-      "idUnity": "d5db8d86-7f46-427d-8582-ae4ba448baf7",
-      "unity": "Usina 2",
-      "date": "2021-11-01T21:52:18.000Z",
-      "kw": "87"
-    },
-    {
-      "id": "9b58698d-89bc-4e83-a357-0729457a24a4",
-      "idUnity": "da67a627-2783-4332-bd27-24243b22c1b1",
-      "unity": "Usina 1",
-      "date": "2021-12-01T21:58:02.000Z",
-      "kw": "280"
-    },
-    {
-      "id": "bdf05329-72fa-42f3-9fcb-94963022806e",
-      "idUnity": "da67a627-2783-4332-bd27-24243b22c1b1",
-      "unity": "Usina 1",
-      "date": "2021-05-01T22:04:40.000Z",
-      "kw": "25"
-    },
-    {
-      "id": "fb2b1a74-6a69-4e28-824f-1b6de767344b",
-      "idUnity": "da67a627-2783-4332-bd27-24243b22c1b1",
-      "unity": "Usina 1",
-      "date": "2021-02-01T22:07:34.000Z",
-      "kw": "120"
-    },
-    {
-      "id": "ec2f2fe8-5f73-4071-9e93-b97d79583c4e",
-      "idUnity": "d5db8d86-7f46-427d-8582-ae4ba448baf7",
-      "unity": "Usina 2",
-      "date": "2021-03-01T22:08:15.000Z",
-      "kw": "27"
-    },
-    {
-      "id": "4457a179-87c2-49ff-8add-8e02e132f777",
-      "idUnity": "da67a627-2783-4332-bd27-24243b22c1b1",
-      "unity": "Usina 1",
-      "date": "2022-01-24T22:08:39.372Z",
-      "kw": "26"
-    },
-    {
-      "id": "013e043f-d33d-4f86-962b-da71385819d5",
-      "idUnity": "78ea99ca-ae6e-4f10-8268-8e983e6e2473",
-      "unity": "Usina 3",
-      "date": "2021-08-01T22:22:14.000Z",
-      "kw": "25"
-    },
-    {
-      "id": "4bbde2a1-03a2-46df-89ca-6e1e4115f8a2",
-      "idUnity": "78ea99ca-ae6e-4f10-8268-8e983e6e2473",
-      "unity": "Usina 3",
-      "date": "2021-07-01T16:16:15.000Z",
-      "kw": "65"
-    },
-    {
-      "id": "ebf6110f-9a6b-443b-a3e1-d7dfd07ea279",
-      "idUnity": "78ea99ca-ae6e-4f10-8268-8e983e6e2473",
-      "unity": "Usina 3",
-      "date": "2021-06-01T16:16:53.000Z",
-      "kw": "84"
-    },
-    {
-      "id": "8cbdf7bd-673d-4138-9fec-0a9938e12616",
-      "idUnity": "da67a627-2783-4332-bd27-24243b22c1b1",
-      "unity": "Usina 1",
-      "date": "2022-01-01T23:04:26.000Z",
-      "kw": "50"
+      "date": "2022-01-01T16:16:04.000Z",
+      "kw": "50",
+      "id": 1
     }
   ]
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import { v4 as uuidv4 } from 'uuid';
 import toast from 'react-hot-toast';
 
 import { getInfo, setInfo } from '../../services/Api';
@@ -45,7 +44,6 @@ const UnidadesCadastro = () => {
             setInfo(
                 '/geracao',
                 {
-                    id: uuidv4(),
                     idUnity: id[0].id,
                     unity: unity,
                     date: date,

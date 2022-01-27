@@ -27,7 +27,7 @@ const Table = ({ data, handleRemove }) => {
             <tbody>
                 {React.Children.toArray(data.map(data => (
                     <S.Tr>
-                        <td>{data.id.substring(0, 3) + "..."}</td>
+                        <td>{data.id}</td>
                         <td>{data.nickname}</td>
                         <td>{data.place}</td>
                         <td>{data.brand}</td>
