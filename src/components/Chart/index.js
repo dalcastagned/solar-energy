@@ -12,7 +12,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
-export default function Chart({labels, dataPlot}) {
+export default function Chart({ labels, dataPlot }) {
 
     ChartJS.register(
         CategoryScale,
@@ -26,6 +26,16 @@ export default function Chart({labels, dataPlot}) {
 
     const options = {
         responsive: true,
+        scales: {
+            x: {
+                grid: {
+                    display: false
+                }
+            },
+            y: {
+                position: 'left'
+            }
+        },
         plugins: {
             legend: {
                 display: false,

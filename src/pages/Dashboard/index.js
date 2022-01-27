@@ -90,7 +90,7 @@ const Dashboard = () => {
         data.map(data => (
             totalGeneration += parseFloat(data.kw)
         ))
-        setAverageGeneration(totalGeneration / units.length)
+        setAverageGeneration(totalGeneration / data.length)
     }
 
     useEffect(() => {
