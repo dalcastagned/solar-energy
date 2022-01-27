@@ -35,7 +35,7 @@ const Unidades = () => {
                     })
                     .catch (() => {return null})               
                 toast.success('Removido com sucesso')
-                setUnits(units.filter(item => (item.id === id)))
+                setUnits(units.filter(item => (item.id !== id)))
             })
             .catch(() => {
                 toast.error('Erro ao remover')
