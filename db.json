@@ -7,14 +7,6 @@
       "model": "150kW",
       "active": true,
       "id": 1
-    },
-    {
-      "nickname": "Usina 2",
-      "place": "São Paulo",
-      "brand": "Resun",
-      "model": "120kW",
-      "active": false,
-      "id": 4
     }
   ],
   "geracao": [

@@ -11,7 +11,6 @@ import * as S from './elements';
 
 const Unidades = () => {
 
-    const [updateUnits, setUpdateUnits] = useState(false)
     const [units, setUnits] = useState([])
     const navigate = useNavigate();
 
@@ -23,7 +22,7 @@ const Unidades = () => {
             .catch(() => {
                 toast.error('Erro ao buscar dados')
             });
-    }, [updateUnits]);
+    }, []);
 
     function handleRemove(id) {
         deleteInfo(`/unidades/${id}`)
@@ -36,7 +35,7 @@ const Unidades = () => {
                     })
                     .catch (() => {return null})               
                 toast.success('Removido com sucesso')
-                setUpdateUnits(!updateUnits)
+                setUnits(units.filter(item => (item.id === id)))
             })
             .catch(() => {
                 toast.error('Erro ao remover')
