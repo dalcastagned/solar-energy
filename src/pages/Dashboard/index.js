@@ -86,11 +86,15 @@ const Dashboard = () => {
     }
 
     const getAverageGeneration = (data) => {
-        let totalGeneration = 0
-        data.map(data => (
-            totalGeneration += parseFloat(data.kw)
-        ))
-        setAverageGeneration(totalGeneration / data.length)
+        if (units.length < 1) {
+            setAverageGeneration(0)
+        } else {
+            let totalGeneration = 0
+            data.map(data => (
+                totalGeneration += parseFloat(data.kw)
+            ))
+            setAverageGeneration(totalGeneration / units.length)
+        }
     }
 
     useEffect(() => {

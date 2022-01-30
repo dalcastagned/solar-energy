@@ -1,50 +1,29 @@
 {
   "unidades": [
     {
-      "id": 1,
       "nickname": "Unidade 1",
       "place": "Rua 1",
       "brand": "Marca 1",
-      "model": "150kW",
-      "active": true
+      "model": "120kW",
+      "active": true,
+      "id": 1
     },
     {
-      "id": 2,
       "nickname": "Unidade 2",
       "place": "Rua 2",
       "brand": "Marca 2",
-      "model": "120kW",
-      "active": true
+      "model": "150kW",
+      "active": true,
+      "id": 2
     }
   ],
   "geracao": [
     {
       "idUnity": 1,
-      "unity": "Usina 1",
-      "date": "2022-01-01T16:16:04.000Z",
-      "kw": "50",
+      "unity": "Unidade 1",
+      "date": "2022-01-30T22:06:42.754Z",
+      "kw": "150",
       "id": 1
-    },
-    {
-      "idUnity": 1,
-      "unity": "Usina 1",
-      "date": "2021-05-01T16:19:26.000Z",
-      "kw": "50",
-      "id": 2
-    },
-    {
-      "idUnity": 1,
-      "unity": "Usina 1",
-      "date": "2021-09-01T16:24:34.000Z",
-      "kw": "190",
-      "id": 3
-    },
-    {
-      "idUnity": 1,
-      "unity": "Usina 1",
-      "date": "2021-01-01T16:31:09.000Z",
-      "kw": "50",
-      "id": 4
     }
   ]
 }
