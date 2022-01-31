@@ -89,7 +89,6 @@ const Dashboard = () => {
         if (unitsLength < 1) {
             setAverageGeneration(0)
         } else {
-            console.log(data)
             let totalGeneration = 0
             data.map(data => (
                 totalGeneration += parseFloat(data.kw)
