@@ -85,23 +85,26 @@ const Dashboard = () => {
         setMonthlyGeneration(getTotalMontlyGeneration)
     }
 
-    const getAverageGeneration = (data) => {
-        if (units.length < 1) {
+    const getAverageGeneration = (data, unitsLength) => {
+        if (unitsLength < 1) {
             setAverageGeneration(0)
         } else {
+            console.log(data)
             let totalGeneration = 0
             data.map(data => (
                 totalGeneration += parseFloat(data.kw)
             ))
-            setAverageGeneration(totalGeneration / units.length)
+            setAverageGeneration(totalGeneration / unitsLength)
         }
     }
 
     useEffect(() => {
+        let unitsLength = 0
         getInfo("/unidades")
             .then((data) => {
                 setUnits(data)
                 getActiveUnits(data)
+                unitsLength = data.length
             })
             .catch(() => {
                 toast.error('Erro ao buscar dados das unidades')
@@ -110,7 +113,7 @@ const Dashboard = () => {
         getInfo("/geracao")
             .then((data) => {
                 getMonthlyGeneration(data)
-                getAverageGeneration(data)
+                getAverageGeneration(data, unitsLength)
             })
             .catch(() => {
                 toast.error('Erro ao buscar dados de geração')

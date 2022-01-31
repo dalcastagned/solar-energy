@@ -1,29 +1,4 @@
 {
-  "unidades": [
-    {
-      "nickname": "Unidade 1",
-      "place": "Rua 1",
-      "brand": "Marca 1",
-      "model": "120kW",
-      "active": true,
-      "id": 1
-    },
-    {
-      "nickname": "Unidade 2",
-      "place": "Rua 2",
-      "brand": "Marca 2",
-      "model": "150kW",
-      "active": true,
-      "id": 2
-    }
-  ],
-  "geracao": [
-    {
-      "idUnity": 1,
-      "unity": "Unidade 1",
-      "date": "2022-01-30T22:06:42.754Z",
-      "kw": "150",
-      "id": 1
-    }
-  ]
+  "unidades": [],
+  "geracao": []
 }
