@@ -104,18 +104,17 @@ const Dashboard = () => {
                 setUnits(data)
                 getActiveUnits(data)
                 unitsLength = data.length
+                getInfo("/geracao")
+                    .then((data) => {
+                        getMonthlyGeneration(data)
+                        getAverageGeneration(data, unitsLength)
+                    })
+                    .catch(() => {
+                        toast.error('Erro ao buscar dados de geração')
+                    });
             })
             .catch(() => {
                 toast.error('Erro ao buscar dados das unidades')
-            });
-
-        getInfo("/geracao")
-            .then((data) => {
-                getMonthlyGeneration(data)
-                getAverageGeneration(data, unitsLength)
-            })
-            .catch(() => {
-                toast.error('Erro ao buscar dados de geração')
             });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

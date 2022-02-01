@@ -1,4 +1,21 @@
 {
-  "unidades": [],
-  "geracao": []
+  "unidades": [
+    {
+      "id": 1,
+      "nickname": "Unidade 1",
+      "place": "Rua 1",
+      "brand": "Marca 1",
+      "model": "150kW",
+      "active": true
+    }
+  ],
+  "geracao": [
+    {
+      "idUnity": 1,
+      "unity": "Unidade 1",
+      "date": "2022-02-01T11:15:29.801Z",
+      "kw": "25",
+      "id": 1
+    }
+  ]
 }
