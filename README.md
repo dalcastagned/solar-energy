@@ -1,7 +1,7 @@
 <h1 align="center">Bem-Vindo(a) ao projeto DevInHouse Solar Energy 👋</h1>
 
 <p align="center">
-    <img src='https://i.ibb.co/zRfSpcN/solar-energy.gif'>
+    <img src='https://github.com/dalcastagned/solar-energy/blob/main/preview.gif'>
 </p>
 
 ## Descrição do Projeto
